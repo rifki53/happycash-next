@@ -5,6 +5,7 @@ import PostImage from "./image";
 import PostBanner from "./banner";
 import rehypePrettyCode from "rehype-pretty-code";
 
+// Fungsi slug Anda, tidak ada perubahan
 const transformToSlug = (input: string) => {
   return input
     .toLowerCase()
@@ -17,18 +18,46 @@ const transformToSlug = (input: string) => {
     .replace(/\-\-+/g, "-");
 };
 
+// --- PERUBAHAN DIMULAI DI SINI ---
+
+const getRawTextContent = (children: React.ReactNode): string => {
+  let text = '';
+  React.Children.forEach(children, (child) => {
+    if (typeof child === 'string' || typeof child === 'number') {
+      text += child;
+    } else if (React.isValidElement(child)) {
+      // FIX: Cast `props` ke tipe yang diketahui untuk mengatasi error 'unknown'.
+      // Ini memberi tahu TypeScript bahwa `props` adalah objek yang mungkin memiliki `children`.
+      const props = child.props as { children?: React.ReactNode };
+      if (props.children) {
+        // Jika child adalah elemen React, gali lebih dalam
+        text += getRawTextContent(props.children);
+      }
+    }
+  });
+  return text;
+};
+
+// --- PERUBAHAN SELESAI ---
+
 const generateHeading = (headingLevel: number) => {
   return ({ children }: { children: React.ReactNode }) => {
-    const textContent = React.Children.toArray(children).join("");
-    const slug = transformToSlug(textContent);
-    return React.createElement(`h${headingLevel}`, { id: slug }, [
-      React.createElement("a", {
-        href: `#${slug}`,
-        key: `link-${slug}`,
-        className: "anchor-link",
-      }),
-      textContent,
-    ]);
+    const textForSlug = getRawTextContent(children);
+    const slug = transformToSlug(textForSlug);
+
+    return React.createElement(
+      `h${headingLevel}`, 
+      { id: slug }, 
+      [
+        React.createElement("a", {
+          href: `#${slug}`,
+          key: `link-${slug}`,
+          className: "anchor-link",
+          "aria-hidden": "true",
+        }),
+        children,
+      ]
+    );
   };
 };
 
@@ -37,6 +66,8 @@ const mdxComponents = {
   h2: generateHeading(2),
   h3: generateHeading(3),
   h4: generateHeading(4),
+  h5: generateHeading(5),
+  h6: generateHeading(6),
   Link: PostLink,
   Image: PostImage,
   Banner: PostBanner,
@@ -46,18 +77,14 @@ export function CustomMDX(props: any) {
   const rehypePrettyCodeOptions = {
     theme: "one-dark-pro",
     onVisitLine(node: any) {
-      // Prevent lines from collapsing in `display: grid` mode, and
-      // allow empty lines to be copy/pasted
       if (node.children.length === 0) {
         node.children = [{ type: "text", value: " " }];
       }
     },
     onVisitHighlightedLine(node: any) {
-      // Each line node by default has `class="line"`.
       node.properties.className.push("line--highlighted");
     },
     onVisitHighlightedWord(node: any) {
-      // Each word node has no className by default.
       node.properties.className = ["word--highlighted"];
     },
   };

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Badge from "@/public/images/badge.svg";
+import Badge from "@/public/del/images/badge.svg";
 
 export default function AppCard({
   app,

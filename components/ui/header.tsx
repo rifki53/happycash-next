@@ -1,98 +1,62 @@
 import Link from "next/link";
-import Logo from "./logo";
-import Dropdown from "@/components/dropdown";
-import MobileMenu from "./mobile-menu";
+import Logo from "./logo"; // Assuming this component renders your "Happycash" logo
+import MobileMenu from "./mobile-menu"; // You may need to update the links inside MobileMenu separately
 
 export default function Header() {
   return (
-    <header className="fixed top-2 z-30 w-full md:top-6">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="relative flex h-14 items-center justify-between gap-3 rounded-2xl bg-white/90 px-3 shadow-lg shadow-black/[0.03] backdrop-blur-xs before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(var(--color-gray-100),var(--color-gray-200))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
-          {/* Site branding */}
-          <div className="flex flex-1 items-center">
-            <Logo />
-          </div>
+    // Header is now fixed to the top, with a white background and a subtle shadow
+    <header className="fixed top-0 z-30 w-full bg-white shadow-md">
+      {/* This div creates the thin blue line at the very top */}
 
-          {/* Desktop navigation */}
-          <nav className="hidden md:flex md:grow">
-            {/* Desktop menu links */}
-            <ul className="flex grow flex-wrap items-center justify-center gap-4 text-sm lg:gap-8">
-              <li className="px-3 py-1">
-                <Link
-                  href="/pricing"
-                  className="flex items-center text-gray-700 transition hover:text-gray-900"
-                >
-                  Pricing
-                </Link>
-              </li>
-              <li className="px-3 py-1">
-                <Link
-                  href="/customers"
-                  className="flex items-center text-gray-700 transition hover:text-gray-900"
-                >
-                  Customers
-                </Link>
-              </li>
-              <li className="px-3 py-1">
-                <Link
-                  href="/blog"
-                  className="flex items-center text-gray-700 transition hover:text-gray-900"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li className="px-3 py-1">
-                <Link
-                  href="/documentation"
-                  className="flex items-center text-gray-700 transition hover:text-gray-900"
-                >
-                  Docs
-                </Link>
-              </li>
-              {/* 1st level: hover */}
-              <Dropdown title="Extra">
-                {/* 2nd level: hover */}
-                <li>
-                  <Link
-                    href="/support"
-                    className="flex rounded-lg px-2 py-1.5 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Support center
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/apps"
-                    className="flex rounded-lg px-2 py-1.5 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Apps
-                  </Link>
-                </li>
-              </Dropdown>
-            </ul>
-          </nav>
+      {/* Main container for header content */}
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
+        {/* Site branding (Logo) */}
+        <div className="flex-shrink-0">
+          <Logo />
+        </div>
 
-          {/* Desktop sign in links */}
-          <ul className="flex flex-1 items-center justify-end gap-3">
+        {/* Desktop navigation - hidden on mobile */}
+        <nav className="hidden md:flex md:grow">
+          {/* Links are centered */}
+          <ul className="flex grow flex-wrap items-center justify-center gap-6 text-sm lg:gap-10">
             <li>
-              <Link
-                href="/signin"
-                className="btn-sm bg-white text-gray-800 shadow-sm hover:bg-gray-50"
-              >
-                Login
+              <Link href="/about" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">
+                About Us
               </Link>
             </li>
             <li>
-              <Link
-                href="/signup"
-                className="btn-sm bg-gray-800 text-gray-200 shadow-sm hover:bg-gray-900"
-              >
-                Register
+              <Link href="/user-story" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">
+                User Story
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link href="/security" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">
+                Account Security
+              </Link>
+            </li>
+            <li>
+              <Link href="/faq" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">
+                FAQ
               </Link>
             </li>
           </ul>
+        </nav>
 
-          <MobileMenu />
+        {/* "Get the App" button on the right - hidden on mobile */}
+        <div className="hidden md:flex md:items-center">
+           <Link href="/get-the-app" className="rounded-lg bg-gray-800 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-gray-900">
+              Get the App
+           </Link>
+        </div>
+
+        {/* Mobile menu hamburger button - only visible on mobile */}
+        <div className="md:hidden">
+            <MobileMenu />
         </div>
       </div>
     </header>

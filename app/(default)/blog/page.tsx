@@ -1,72 +1,105 @@
-import { getBlogPosts } from "@/components/mdx/utils";
-import PageIllustration from "@/components/page-illustration";
-import PostItem from "@/components/post-item";
+import { Metadata } from "next";
+import { getStrapiPosts, getStrapiCategories } from "@/hooks/strapi";
+import type { Category } from "@/hooks/strapi";
+import { generateBreadcrumbSchema } from "@/utils/schemas";
 
-export const metadata = {
-  title: "Blog - Simple",
-  description: "Page description",
+// Impor komponen Anda
+import BlogList from "../../../components/mdx/blog-list";
+import HeroTitle from "@/components/hero-title";
+
+// 1. Definisikan Metadata SPESIFIK untuk Halaman Indeks Blog (/blog)
+export const metadata: Metadata = {
+  // Judul spesifik. Akan menjadi: "Blog & Artikel Keuangan Terbaru | Adapundi"
+  title: "Blog & Artikel Keuangan Terbaru",
+  description:
+    "Jelajahi blog Adapundi untuk menemukan artikel, berita, dan informasi terkini seputar keuangan, tips pinjaman, dan solusi finansial terpercaya.",
+
+  // URL kanonis untuk halaman ini.
+  alternates: {
+    canonical: "/blog",
+  },
+
+  // --- Menimpa Open Graph & Twitter untuk halaman ini ---
+  openGraph: {
+    // Tipe 'website' (dari layout) sudah cocok untuk halaman indeks blog.
+    // Jika ini halaman detail artikel, tipenya harus 'article'.
+    title: "Blog & Artikel Keuangan Terbaru | Adapundi",
+    description:
+      "Jelajahi blog Adapundi untuk menemukan artikel, berita, dan informasi terkini seputar keuangan, tips pinjaman, dan solusi finansial terpercaya.",
+    url: "/blog", // URL spesifik halaman ini
+    images: [
+      {
+        url: "/twitter-card-1200x630.png", // Fallback image
+        width: 1200,
+        height: 630,
+        alt: "Blog Adapundi",
+      },
+    ],
+  },
+  twitter: {
+    title: "Blog & Artikel Keuangan Terbaru | Adapundi",
+    description:
+      "Jelajahi blog Adapundi untuk menemukan artikel, berita, dan informasi terkini seputar keuangan, tips pinjaman, dan solusi finansial terpercaya.",
+    images: [
+      {
+        url: "/twitter-card-1200x630.png", // Fallback image
+        width: 1200,
+        height: 630,
+        alt: "Adapundi Twitter Card",
+      },
+    ],
+  },
 };
 
-export default function Blog() {
-  const allBlogs = getBlogPosts();
+// Props 'searchParams' secara otomatis disediakan oleh Next.js di Server Component
+interface BlogPageProps {
+  searchParams: {
+    category?: string;
+  };
+}
 
-  // Sort posts by date
-  allBlogs.sort((a, b) => {
-    return new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
-      ? -1
-      : 1;
-  });
+export default async function BlogPage({ searchParams }: BlogPageProps) {
+  // Tambahkan await untuk me-resolve searchParams sepenuhnya
+  const resolvedSearchParams = await searchParams;
+
+  // Ambil data dari server menggunakan resolvedSearchParams
+  const selectedCategory = resolvedSearchParams.category || "All";
+  const [posts, categoriesData] = await Promise.all([
+    getStrapiPosts(selectedCategory),
+    getStrapiCategories(),
+  ]);
+  const allCategories: Category[] = [{ id: 0, name: "All" }, ...categoriesData];
+
+  // 2. Buat skema Breadcrumb JSON-LD
+  const breadcrumbSchema = generateBreadcrumbSchema(["home", "blog"]);
 
   return (
-    <section className="relative">
-      <PageIllustration />
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        {/* Main content */}
-        <div className="mx-auto max-w-3xl pb-12 pt-32 md:pb-20 md:pt-40">
-          {/* Section header */}
-          <div className="pb-16">
-            <h1 className="mb-4 text-5xl font-bold">The Simple blog</h1>
-            <p className="text-lg text-gray-700">
-              Content for developers, product, and digital experts.
-            </p>
-          </div>
-          {/*Categories */}
-          <div className="mb-10 flex flex-wrap gap-2">
-            <button className="btn-sm bg-gray-800 font-normal text-gray-200 shadow-sm hover:bg-gray-900">
-              All
-            </button>
-            <button className="btn-sm bg-white font-normal text-gray-800 shadow-sm hover:bg-gray-50">
-              Interviews
-            </button>
-            <button className="btn-sm bg-white font-normal text-gray-800 shadow-sm hover:bg-gray-50">
-              Inspiration
-            </button>
-            <button className="btn-sm bg-white font-normal text-gray-800 shadow-sm hover:bg-gray-50">
-              Updates
-            </button>
-            <button className="btn-sm bg-white font-normal text-gray-800 shadow-sm hover:bg-gray-50">
-              Product
-            </button>
-            <button className="btn-sm bg-white font-normal text-gray-800 shadow-sm hover:bg-gray-50">
-              Miscellaneous
-            </button>
-          </div>
+    <>
+      {/* Sisipkan JSON-LD Schema untuk Breadcrumb */}
+      <script
+        key="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
-          <div className="space-y-10 border-l [border-image:linear-gradient(to_bottom,var(--color-slate-200),var(--color-slate-300),transparent)1]">
-            {allBlogs.map((post, postIndex) => (
-              <PostItem key={postIndex} {...post} />
-            ))}
-          </div>
+      <HeroTitle
+        title="Terkini di Adapundi"
+        description="Cek berita dan kegiatan terbaru di sini"
+        isBlog={true}
+      />
 
-          {/* Load more */}
-          <div className="mt-12 text-center">
-            <button className="btn-sm min-w-[220px] bg-gray-800 py-1.5 text-gray-200 shadow-sm hover:bg-gray-900">
-              Load more{" "}
-              <span className="ml-2 tracking-normal text-gray-500">↓</span>
-            </button>
+      <section className="relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="mx-auto pt-10 pb-12 md:pb-20">
+            {/* Komponen BlogList sekarang menerima semua data sebagai props */}
+            <BlogList
+              posts={posts}
+              categories={allCategories}
+              selectedCategory={selectedCategory}
+            />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

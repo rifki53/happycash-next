@@ -1,13 +1,13 @@
 import Testimonial from "@/components/testimonial";
-import TestimonialImg01 from "@/public/images/testimonial-01.jpg";
-import TestimonialImg02 from "@/public/images/testimonial-02.jpg";
-import TestimonialImg03 from "@/public/images/testimonial-03.jpg";
-import TestimonialImg04 from "@/public/images/testimonial-04.jpg";
-import TestimonialImg05 from "@/public/images/testimonial-05.jpg";
-import TestimonialImg06 from "@/public/images/testimonial-06.jpg";
-import TestimonialImg07 from "@/public/images/testimonial-07.jpg";
-import TestimonialImg08 from "@/public/images/testimonial-08.jpg";
-import TestimonialImg09 from "@/public/images/testimonial-09.jpg";
+import TestimonialImg01 from "@/public/del/images/testimonial-01.jpg";
+import TestimonialImg02 from "@/public/del/images/testimonial-02.jpg";
+import TestimonialImg03 from "@/public/del/images/testimonial-03.jpg";
+import TestimonialImg04 from "@/public/del/images/testimonial-04.jpg";
+import TestimonialImg05 from "@/public/del/images/testimonial-05.jpg";
+import TestimonialImg06 from "@/public/del/images/testimonial-06.jpg";
+import TestimonialImg07 from "@/public/del/images/testimonial-07.jpg";
+import TestimonialImg08 from "@/public/del/images/testimonial-08.jpg";
+import TestimonialImg09 from "@/public/del/images/testimonial-09.jpg";
 
 export default function TestimonialsGrid() {
   const testimonials = [
