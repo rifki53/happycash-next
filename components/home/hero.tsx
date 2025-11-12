@@ -15,11 +15,13 @@ export default function Hero() {
   const [isQrVisible, setQrVisible] = useState(false);
 
   return (
-    <section className="relative bg-[#1A1A1A] text-white overflow-hidden">
+    // Jadikan <section> sebagai konteks pemosisian (relative)
+    // overflow-hidden akan memastikan gambar tidak keluar dari section
+    <section className="relative bg-custom-darkgreen text-white overflow-hidden">
       {/* Wadah untuk konten teks, tetap terpusat dan terbatas lebarnya */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Batasi konten teks hanya di sisi kiri pada tampilan desktop */}
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 py-8">
           <div className="py-12 md:py-20 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tighter tracking-tighter mb-4">
               <span className="text-lime-400">Happy Cash,</span> Happy Life
@@ -63,13 +65,13 @@ export default function Hero() {
       </div>
 
       {/* Gambar yang diposisikan secara absolut untuk desktop */}
+      {/* Kelas 'hidden md:block' membuatnya hanya muncul di layar medium ke atas */}
       <div className="absolute top-0 right-0 h-full w-1/2 hidden md:block">
         <Image
           src={heroWoman}
           alt="A happy woman feeling financially secure"
           layout="fill"
-          // UBAH DARI 'contain' MENJADI 'cover' UNTUK MEMENUHI TINGGI
-          objectFit="cover"
+          objectFit="contain"
           objectPosition="right bottom"
           priority
         />

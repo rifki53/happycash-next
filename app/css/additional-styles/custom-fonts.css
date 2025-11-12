@@ -1,0 +1,42 @@
+@layer components {
+  /* Gaya dasar untuk body */
+  body {
+    @apply text-base text-gray-800 antialiased;
+  }
+
+  /* Heading 1: Dibuat responsif */
+  .h1 {
+    /* Mobile: seukuran h3 */
+    @apply text-2xl font-extrabold leading-tight tracking-tight text-black;
+    /* Tablet: seukuran h2 */
+    @apply sm:text-4xl;
+    /* Desktop: ukuran asli h1 */
+    @apply md:text-5xl;
+  }
+
+  /* Heading 2: Dibuat lebih granular dengan breakpoint lg */
+  .h2 {
+    /* Mobile: seukuran h4/h3 */
+    @apply text-2xl font-bold leading-tight text-black;
+    /* Tablet: seukuran h2 asli */
+    @apply sm:text-3xl;
+    /* Desktop: ukuran lebih besar */
+    @apply md:text-4xl;
+  }
+
+  /* Heading 3: Ukuran font disesuaikan untuk tablet (md) */
+  .h3 {
+    @apply text-2xl font-bold text-black md:text-3xl;
+  }
+
+  /* Heading 4: Ukuran font disesuaikan untuk tablet (md) */
+  .h4 {
+    @apply text-xl font-semibold text-black md:text-2xl;
+  }
+
+  /* Paragraf: Dibuat responsif */
+  .p {
+    /* Ukuran default (mobile) lebih kecil untuk keterbacaan */
+    @apply text-sm leading-relaxed text-gray-700 sm:text-base sm:leading-relaxed;
+  }
+}
