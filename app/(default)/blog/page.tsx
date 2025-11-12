@@ -1,11 +1,9 @@
 import { Metadata } from "next";
-import { getStrapiPosts, getStrapiCategories } from "@/hooks/strapi";
-import type { Category } from "@/hooks/strapi";
-import { generateBreadcrumbSchema } from "@/utils/schemas";
+import { getStrapiPosts, getStrapiCategories } from "@/utils/strapi";
+import type { Category } from "@/utils/strapi";
 
 // Impor komponen Anda
-import BlogList from "../../../components/mdx/blog-list";
-import HeroTitle from "@/components/hero-title";
+import BlogList from "@/components/mdx/blog-list";
 
 // 1. Definisikan Metadata SPESIFIK untuk Halaman Indeks Blog (/blog)
 export const metadata: Metadata = {
@@ -71,23 +69,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   const allCategories: Category[] = [{ id: 0, name: "All" }, ...categoriesData];
 
   // 2. Buat skema Breadcrumb JSON-LD
-  const breadcrumbSchema = generateBreadcrumbSchema(["home", "blog"]);
 
   return (
     <>
-      {/* Sisipkan JSON-LD Schema untuk Breadcrumb */}
-      <script
-        key="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-
-      <HeroTitle
-        title="Terkini di Adapundi"
-        description="Cek berita dan kegiatan terbaru di sini"
-        isBlog={true}
-      />
-
       <section className="relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="mx-auto pt-10 pb-12 md:pb-20">

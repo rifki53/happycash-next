@@ -1,4 +1,4 @@
-import AppCard from "@/components/app-card";
+import AppCard from "@/components/del/app-card";
 import IntegrationImg01 from "@/public/del/images/integration-01.svg";
 import IntegrationImg02 from "@/public/del/images/integration-02.svg";
 import IntegrationImg03 from "@/public/del/images/integration-03.svg";

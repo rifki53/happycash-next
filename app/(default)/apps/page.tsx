@@ -4,8 +4,8 @@ export const metadata = {
 };
 
 import Hero from "./hero";
-import AppList from "@/components/app-list";
-import Cta from "@/components/cta-alternative";
+import AppList from "@/components/del/app-list";
+import Cta from "@/components/del/cta-alternative";
 
 export default function Apps() {
   return (

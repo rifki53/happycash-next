@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PageIllustration from "@/components/page-illustration";
+import PageIllustration from "@/components/del/page-illustration";
 import Avatar01 from "@/public/del/images/avatar-01.jpg";
 import Avatar02 from "@/public/del/images/avatar-02.jpg";
 import Avatar03 from "@/public/del/images/avatar-03.jpg";

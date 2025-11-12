@@ -1,4 +1,4 @@
-import Accordion from "@/components/accordion";
+import Accordion from "@/components/del/accordion";
 
 export default function Faqs() {
   const faqs01 = [

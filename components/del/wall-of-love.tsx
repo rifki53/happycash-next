@@ -1,7 +1,7 @@
 "use client";
 
 import useMasonry from "@/utils/useMasonry";
-import Testimonial from "@/components/testimonial";
+import Testimonial from "@/components/del/testimonial";
 import TestimonialImg01 from "@/public/del/images/testimonial-01.jpg";
 import TestimonialImg02 from "@/public/del/images/testimonial-02.jpg";
 import TestimonialImg03 from "@/public/del/images/testimonial-03.jpg";

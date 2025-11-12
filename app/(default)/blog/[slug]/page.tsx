@@ -3,8 +3,8 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 
 import { getStrapiPostBySlug, formatDate } from "@/hooks/strapi"; 
-import PostNav from "@/components/mdx/post-nav";
-import { CustomMDX } from "@/components/mdx/custom-mdx";
+import PostNav from "@/components/del/mdx/post-nav";
+import { CustomMDX } from "@/components/del/mdx/custom-mdx";
 
 interface PostPageProps {
   params: {

@@ -3,11 +3,11 @@ export const metadata = {
   description: "Page description",
 };
 
-import PricingTables from "@/components/pricing-tables";
-import ComparePlans from "@/components/compare-plans";
-import TestimonialsGrid from "@/components/testimonials-grid";
-import Faqs from "@/components/faqs";
-import Cta from "@/components/cta-alternative";
+import PricingTables from "@/components/del/pricing-tables";
+import ComparePlans from "@/components/del/compare-plans";
+import TestimonialsGrid from "@/components/del/testimonials-grid";
+import Faqs from "@/components/del/faqs";
+import Cta from "@/components/del/cta-alternative";
 
 export default function Pricing() {
   return (

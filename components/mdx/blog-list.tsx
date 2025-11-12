@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { formatDate } from "@/hooks/strapi";
-import type { Post, Category } from "@/hooks/strapi";
+import { formatDate } from "@/utils/strapi";
+import type { Post, Category } from "@/utils/strapi";
 
 // Ini adalah SERVER COMPONENT. Tidak ada "use client", tidak ada hooks.
 interface BlogListProps {

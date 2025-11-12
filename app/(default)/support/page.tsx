@@ -4,8 +4,8 @@ export const metadata = {
 };
 
 import Hero from "./hero";
-import Faqs from "@/components/faqs-02";
-import Cta from "@/components/cta-alternative";
+import Faqs from "@/components/del/faqs-02";
+import Cta from "@/components/del/cta-alternative";
 
 export default function Support() {
   return (

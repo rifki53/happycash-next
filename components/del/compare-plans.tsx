@@ -1,4 +1,4 @@
-import Tooltip from "@/components/tooltip";
+import Tooltip from "@/components/del/tooltip";
 
 export default function ComparePlans() {
   return (

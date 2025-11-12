@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import SearchModal from "@/components/search-modal";
+import SearchModal from "@/components/del/search-modal";
 
 export default function Hero() {
   const [searchModalOpen, setSearchModalOpen] = useState<boolean>(false);

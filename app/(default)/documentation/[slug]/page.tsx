@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { getDocPages } from "@/components/mdx/utils";
+import { getDocPages } from "@/components/del/mdx/utils";
 import { notFound } from "next/navigation";
-import { CustomMDX } from "@/components/mdx/mdx";
-import PageIllustration from "@/components/page-illustration";
+import { CustomMDX } from "@/components/del/mdx/mdx";
+import PageIllustration from "@/components/del/page-illustration";
 import DocumentationProvider from "./documentation-provider";
 import Sidebar from "./sidebar";
 import Hamburger from "./hamburger";
-import PageNavigation from "@/components/page-navigation";
+import PageNavigation from "@/components/del/page-navigation";
 
 function updatedDate(dateString: string) {
   const date = new Date(dateString);

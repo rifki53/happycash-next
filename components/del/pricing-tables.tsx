@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import PageIllustration from "@/components/page-illustration";
+import PageIllustration from "@/components/del/page-illustration";
 
 export default function PricingTables() {
   const [annual, setAnnual] = useState<boolean>(true);
