@@ -1,4 +1,7 @@
 import "./css/style.css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
 import { Inter } from "next/font/google";
 
