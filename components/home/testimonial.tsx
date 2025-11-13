@@ -22,9 +22,8 @@ import vincentSyImage from "@/public/images/customers/vincent-sy.jpg";
 import { FaStar } from "react-icons/fa";
 
 export default function Testimonials() {
-  // Dummy data for 9 testimonials
-
   const testimonials = [
+    // ... (data testimoni Anda tetap sama)
     {
       name: "Kat kat",
       quote:
@@ -152,7 +151,7 @@ export default function Testimonials() {
               modules={[Pagination, Autoplay]}
               spaceBetween={30}
               slidesPerView={1}
-              slidesPerGroup={1} // Group by 1 on mobile
+              slidesPerGroup={1}
               pagination={{
                 el: ".testimonial-pagination",
                 clickable: true,
@@ -161,26 +160,31 @@ export default function Testimonials() {
                 delay: 5000,
                 disableOnInteraction: true,
               }}
-              loop={true}
+              loop={false}
               breakpoints={{
                 640: {
                   slidesPerView: 2,
-                  slidesPerGroup: 2, // Group by 2 on tablet
+                  slidesPerGroup: 2,
                   spaceBetween: 20,
                 },
                 1024: {
                   slidesPerView: 3,
-                  slidesPerGroup: 3, // Group by 3 on desktop
+                  slidesPerGroup: 3,
                   spaceBetween: 30,
                 },
               }}
             >
               {testimonials.map((testimonial, index) => (
                 <SwiperSlide key={index}>
-                  <div className="flex h-full flex-col rounded-lg bg-white p-6 shadow-xl">
+                  {/* 
+                    PERUBAHAN DI SINI:
+                    - Menghapus 'h-full'
+                    - Menambahkan tinggi tetap 'h-96' (384px)
+                  */}
+                  <div className="flex h-96 flex-col rounded-lg bg-white p-6 shadow-xl">
                     <div className="mb-4 flex items-center">
                       <Image
-                        className="mr-4 h-12 w-12 rounded-full"
+                        className="mr-4 h-12 w-12 rounded-full object-cover"
                         src={testimonial.image}
                         width={48}
                         height={48}
@@ -199,7 +203,7 @@ export default function Testimonials() {
                         </div>
                       </div>
                     </div>
-                    <blockquote className="flex-grow text-slate-600">
+                    <blockquote className="flex-grow text-slate-600 line-clamp-6">
                       {testimonial.quote}
                     </blockquote>
                   </div>
@@ -215,6 +219,7 @@ export default function Testimonials() {
 
       {/* Custom styles for pagination bars */}
       <style jsx global>{`
+        /* ... (style Anda tetap sama) ... */
         .testimonial-pagination .swiper-pagination-bullet {
           width: 2.5rem; /* 40px */
           height: 0.25rem; /* 4px */
