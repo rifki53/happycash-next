@@ -11,7 +11,7 @@ import appStoreButton from "@/public/images/hero-home/button-app-store@2x.png";
 import googlePlayButton from "@/public/images/hero-home/button-google-play@2x.png";
 import qrCode from "@/public/images/hero-home/qr-code-app-stores.png";
 
-export default function Hero() {
+export default function HeroHome() {
   const [isQrVisible, setQrVisible] = useState(false);
 
   return (

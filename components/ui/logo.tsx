@@ -1,13 +1,25 @@
+// components/ui/logo.tsx (atau lokasi file Anda)
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Logo() {
+// Definisikan tipe untuk props
+interface LogoProps {
+  isWhite?: boolean; // isWhite adalah opsional dan bertipe boolean
+}
+
+export default function Logo({ isWhite = false }: LogoProps) {
+  // Tentukan path gambar berdasarkan nilai props isWhite
+  const logoSrc = isWhite
+    ? "/logo-white-with-text.png"
+    : "/logo-with-text.png";
+
   return (
     <Link href="/" className="inline-flex" aria-label="Happycash">
       <Image
-        src="/Logo-with-text.png"
+        src={logoSrc}
         width={150}
         height={28}
+        priority // Tambahkan priority jika logo ada di LCP (Largest Contentful Paint)
         alt="Happycash logo"
       />
     </Link>

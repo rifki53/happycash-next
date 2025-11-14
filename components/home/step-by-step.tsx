@@ -36,7 +36,7 @@ const stepDescriptions = [
   'Within minutes the funds are disbursed after your application is approved.',
 ];
 
-export default function HowItWorks() {
+export default function StepByStep() {
   // State untuk mengelola langkah yang sedang aktif
   const [stepActive, setStepActive] = useState(1);
 

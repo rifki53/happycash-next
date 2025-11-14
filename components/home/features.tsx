@@ -1,39 +1,39 @@
 // components/Features.tsx
-import Image from 'next/image';
+import Image from "next/image";
 
 // Impor gambar ikon dari direktori public
-import iconLegit from '@/public/images/features/super-legit.png';
-import iconDisbursement from '@/public/images/features/full-disbursement.png';
-import iconRepayment from '@/public/images/features/equal-repayment.png';
-import iconSupport from '@/public/images/features/responsive-support.png';
+import iconLegit from "@/public/images/features/super-legit.png";
+import iconDisbursement from "@/public/images/features/full-disbursement.png";
+import iconRepayment from "@/public/images/features/equal-repayment.png";
+import iconSupport from "@/public/images/features/responsive-support.png";
 
 // Struktur data untuk setiap item fitur
 const features = [
   {
     icon: iconLegit,
-    title: 'Super Legit',
-    description: 'SEC & CIC licensed for trust and compliance.',
+    title: "Licensed & Trusted",
+    description: "SEC & CIC licensed for trust and compliance.",
   },
   {
     icon: iconDisbursement,
-    title: 'Full Disbursement',
-    description: '0 hidden fee, transparent and fair.',
+    title: "Full Disbursement",
+    description: "0 hidden fee, transparent and fair.",
   },
   {
     icon: iconRepayment,
-    title: 'Equal Monthly Repayment',
-    description: 'Fixed installments for easy budgeting.',
+    title: "Equal Monthly Repayment",
+    description: "Fixed installments for easy budgeting.",
   },
   {
     icon: iconSupport,
-    title: 'Responsive Support',
-    description: 'Assistance available in 3 minutes.',
+    title: "Responsive Support",
+    description: "Assistance available in 3 minutes.",
   },
 ];
 
 export default function Features() {
   return (
-    <section className="bg-slate-900">
+    <section className="bg-custom-slate">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
         {/* Judul Section */}
         <div className="text-center mb-16">
@@ -50,10 +50,10 @@ export default function Features() {
             <div key={index} className="flex flex-col items-center text-center">
               {/* Ikon */}
               <div className="mb-4">
-                <Image 
-                  src={feature.icon} 
-                  alt={`${feature.title} icon`} 
-                  width={128} 
+                <Image
+                  src={feature.icon}
+                  alt={`${feature.title} icon`}
+                  width={128}
                   height={128}
                   className="h-auto"
                 />

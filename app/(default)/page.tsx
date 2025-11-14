@@ -1,7 +1,7 @@
 import AccountSecuritySection from "@/components/home/account-security-section";
 import Features from "@/components/home/features";
 import GovernmentPartners from "@/components/home/government-partners";
-import Hero from "@/components/home/hero";
+import HeroHome from "@/components/home/hero-home";
 import Partners from "@/components/home/partners";
 import StepByStep from "@/components/home/step-by-step";
 import Testimonials from "@/components/home/testimonial";
@@ -15,7 +15,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <Hero />
+      <HeroHome />
       <Features />
       <StepByStep />
       <GovernmentPartners />

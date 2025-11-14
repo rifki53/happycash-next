@@ -30,7 +30,7 @@ const partners = [
 
 export default function GovernmentPartners() {
   return (
-    <section className="bg-slate-900">
+    <section className="bg-custom-slate">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
         <div className="max-w-4xl mx-auto text-center">
           {/* Judul Utama */}

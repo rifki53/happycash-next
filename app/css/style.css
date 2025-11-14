@@ -60,6 +60,7 @@
   --animate-infinite-scroll: infinite-scroll;  
 
   --color-custom-darkgreen: #1a2206;
+  --color-custom-slate: #122933;
 
   @keyframes code-1 {
     0% {

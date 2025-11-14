@@ -9,18 +9,18 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Logo */}
         <div className="pt-12">
-          <Logo />
+          <Logo isWhite={true} />
         </div>
 
         {/* Top area: Blocks */}
         <div className="grid gap-8 py-8 sm:grid-cols-12 md:pb-12">
           {/* 1st block: About */}
           <div className="space-y-4 sm:col-span-12 lg:col-span-5">
-            <div className="text-sm text-slate-300">
+            <div className="text-sm text-slate-200">
               <p className="font-semibold text-lime-400 mb-2">
                 Want to help accelerate financial inclusion in the Philippines?
               </p>
-              <p className="text-slate-400">
+              <p className="text-slate-200">
                 Happycash is a fintech platform that delivers digital credit to
                 Filipinos – providing quick, seamless, affordable financial
                 access to the credit-worthy yet underserved. Happycash is
@@ -51,7 +51,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-lime-400">Join us</h3>
             <a
               href="mailto:job@happycash.ph"
-              className="text-sm text-slate-300 hover:text-white transition"
+              className="text-sm text-slate-200 hover:text-white transition"
             >
               job@happycash.ph
             </a>
@@ -63,7 +63,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:09102626060"
-                  className="text-slate-300 hover:text-white transition"
+                  className="text-slate-200 hover:text-white transition"
                 >
                   09102626060
                 </a>
@@ -71,7 +71,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:09085848852"
-                  className="text-slate-300 hover:text-white transition"
+                  className="text-slate-200 hover:text-white transition"
                 >
                   09085848852
                 </a>
@@ -86,7 +86,7 @@ export default function Footer() {
             </h3>
             <a
               href="mailto:cs@happycash.ph"
-              className="text-sm text-slate-300 hover:text-white transition"
+              className="text-sm text-slate-200 hover:text-white transition"
             >
               cs@happycash.ph
             </a>
@@ -94,7 +94,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-lime-400 mt-4">
               Office Hours
             </h3>
-            <p className="text-sm text-slate-300">
+            <p className="text-sm text-slate-200">
               Monday-Sunday:
               <br />
               9:00-18:00
@@ -104,7 +104,7 @@ export default function Footer() {
           {/* 4th block: Address */}
           <div className="space-y-4 sm:col-span-12 md:col-span-3 lg:col-span-3">
             <h3 className="text-sm font-semibold text-lime-400">Address</h3>
-            <p className="text-sm text-slate-300">
+            <p className="text-sm text-slate-200">
               26th Floor, The World Center,
               <br />
               Gil Puyat Ave., Brgy, Bel-Air,
