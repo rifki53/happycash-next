@@ -57,7 +57,7 @@ export default function TestimonialCard({
           <div className="flex w-full flex-row justify-between items-start">
             <StarRating count={testimonial.stars} />
             {/* Ukuran ikon disesuaikan agar lebih seimbang */}
-            <FaQuoteRight className="text-5xl text-yellow-500 opacity-70" />
+            <FaQuoteRight className="text-5xl text-custom-yellow opacity-70" />
           </div>
 
           {/* Anda mengubah font menjadi lebih besar, saya pertahankan */}

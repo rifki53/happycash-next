@@ -51,7 +51,7 @@ export default function ModalVideo({
 
         <div className="pointer-events-none absolute bottom-5 left-5">
           <div
-            className="flex items-center gap-2 rounded-full bg-lime-400 px-4 py-2 text-gray-900 shadow-lg transition-transform duration-300 group-hover:scale-110"
+            className="flex items-center gap-2 rounded-full bg-custom-yellow px-4 py-2 text-gray-900 shadow-lg transition-transform duration-300 group-hover:scale-110"
           >
             <FaPlay size={12} />
             <span className="text-sm font-semibold">Play</span>

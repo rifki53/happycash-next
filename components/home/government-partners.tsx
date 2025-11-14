@@ -35,7 +35,7 @@ export default function GovernmentPartners() {
         <div className="max-w-4xl mx-auto text-center">
           {/* Judul Utama */}
           <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-            <span className="text-yellow-400">Your Trusted and Legitimate</span>
+            <span className="text-custom-yellow">Your Trusted and Legitimate</span>
             <br />
             Lending Partner
           </h2>
