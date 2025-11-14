@@ -1,9 +1,9 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /* Additional styles */
-@import './additional-styles/utility-patterns.css' layer(components);
+@import "./additional-styles/utility-patterns.css" layer(components);
 @import "./additional-styles/custom-fonts.css" layer(components);
-@import './additional-styles/theme.css';
+@import "./additional-styles/theme.css";
 
 @plugin "@tailwindcss/forms" {
   strategy: base;
@@ -57,10 +57,11 @@
   --animate-breath: breath;
   --animate-float: float;
   --animate-line: line;
-  --animate-infinite-scroll: infinite-scroll;  
+  --animate-infinite-scroll: infinite-scroll;
 
   --color-custom-darkgreen: #1a2206;
   --color-custom-slate: #122933;
+  --color-custom-yellow: #d6f837;
 
   @keyframes code-1 {
     0% {

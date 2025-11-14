@@ -17,19 +17,17 @@ interface Testimonial {
 interface TestimonialCardProps {
   testimonial: Testimonial;
   children: React.ReactNode;
-  // PERUBAHAN 1: Tambahkan 'className' sebagai prop opsional
   className?: string;
 }
 
 export default function TestimonialCard({
   testimonial,
   children,
-  // PERUBAHAN 2: Terima prop 'className'
   className,
 }: TestimonialCardProps) {
   return (
-    // PERUBAHAN 3: Gabungkan className dasar dengan className dari props
     <article
+      // Tinggi kartu keseluruhan tetap h-[30rem]
       className={`relative flex h-[30rem] flex-col rounded-2xl bg-white p-5 shadow-lg ${className}`}
     >
       <header className="mb-4 flex items-center gap-3">
@@ -45,11 +43,19 @@ export default function TestimonialCard({
         </div>
       </header>
 
-      {/* Jika ada video, tampilkan deskripsi dan thumbnail video */}
+      {/* Jika ada video, tampilkan deskripsi dengan ikon dan thumbnail */}
       {testimonial.videoThumb && testimonial.videoUrl ? (
-        <div className="grow">
-          <p className="mb-4">{children}</p>
-          <div className="flex justify-center md:justify-start">
+        // Wrapper ini akan 'tumbuh' mengisi ruang yang tersedia
+        <div className="grow flex flex-col">
+          {/* 2. Area deskripsi dengan tinggi tetap dan ikon play */}
+          <div className="flex items-start gap-3 mb-4">
+            <p className="h-11 overflow-y-auto text-sm text-gray-700 pr-2">
+              {children}
+            </p>
+          </div>
+
+          {/* mt-auto akan mendorong thumbnail video ke bagian bawah container */}
+          <div className="mt-auto flex justify-center md:justify-start">
             <ModalVideo
               thumb={testimonial.videoThumb}
               thumbWidth={312}
@@ -62,8 +68,7 @@ export default function TestimonialCard({
           </div>
         </div>
       ) : (
-        // Jika tidak ada video, tampilkan teks saja
-        <div className="grow text-sm text-gray-700">{children}</div>
+        <div className="grow text-sm text-gray-700 overflow-y-auto">{children}</div>
       )}
 
       <footer className="mt-4 flex items-center gap-2.5 text-gray-700">

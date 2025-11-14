@@ -132,7 +132,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="bg-slate-900">
+    <section className="bg-custom-darkgreen">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="py-12 md:py-20">
           {/* Section header */}
@@ -140,7 +140,7 @@ export default function Testimonials() {
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
               Why They Love Us
             </h2>
-            <p className="text-3xl font-bold text-lime-400 md:text-4xl">
+            <p className="text-3xl font-bold text-custom-yellow md:text-4xl">
               Real Comments
             </p>
           </div>

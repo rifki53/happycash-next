@@ -37,7 +37,7 @@ export default function Features() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
         {/* Judul Section */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-custom-yellow">
             Your Trusted Partner for Easy,
             <br />
             <span className="text-lime-400">Transparent Loans</span>
@@ -59,7 +59,7 @@ export default function Features() {
                 />
               </div>
               {/* Judul Fitur */}
-              <h3 className="text-xl font-bold text-lime-400 mb-2">
+              <h3 className="text-xl font-bold text-lime-400 mb-2 text-custom-yellow">
                 {feature.title}
               </h3>
               {/* Deskripsi Fitur */}

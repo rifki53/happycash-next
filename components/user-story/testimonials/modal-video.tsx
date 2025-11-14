@@ -1,18 +1,14 @@
-// components/testimonials/ModalVideo.tsx
+// components/user-story/testimonials/modal-video.tsx
 
 "use client";
 
 import { useState, useRef, useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
-import secondaryIllustration from "@/public/images/icon/secondary-illustration.svg";
 import { FaPlay } from "react-icons/fa";
 
-// Definisikan tipe untuk props
 interface ModalVideoProps {
   thumb: StaticImageData | string;
-  thumbWidth: number;
-  thumbHeight: number;
   thumbAlt: string;
   video: string;
   videoWidth: number;
@@ -21,8 +17,6 @@ interface ModalVideoProps {
 
 export default function ModalVideo({
   thumb,
-  thumbWidth,
-  thumbHeight,
   thumbAlt,
   video,
   videoWidth,
@@ -38,50 +32,34 @@ export default function ModalVideo({
   }, [modalOpen]);
 
   return (
-    <div className="relative">
-      {/* Ilustrasi sekunder (tidak berubah) */}
-      <div
-        className="pointer-events-none absolute bottom-8 left-1/2 -z-10 -ml-28 -translate-x-1/2 translate-y-1/2"
-        aria-hidden="true"
-      >
-        <Image
-          className="md:max-w-none"
-          src={secondaryIllustration}
-          width={1165}
-          height={1012}
-          alt="Secondary illustration"
-          loading="lazy"
-        />
-      </div>
-
-      {/* Thumbnail Video */}
+    <div className="relative h-full w-full">
       <button
-        className="group relative flex items-center justify-center rounded-2xl focus:outline-none focus-visible:ring focus-visible:ring-indigo-200"
+        // PERUBAHAN: Hapus rounded-2xl dari button
+        className="group relative flex h-full w-full items-center justify-center focus:outline-none"
         onClick={() => setModalOpen(true)}
         aria-label="Watch the video"
       >
-        <figure className="relative overflow-hidden rounded-2xl bg-green-200">
-          <Image
-            src={thumb}
-            width={thumbWidth}
-            height={thumbHeight}
-            alt={thumbAlt}
-            loading="lazy"
-          />
-        </figure>
+        {/* PERUBAHAN: Hapus rounded-2xl dari Image */}
+        <Image
+          className="h-full w-full object-cover"
+          src={thumb}
+          width={768}
+          height={432}
+          alt={thumbAlt}
+          loading="lazy"
+        />
 
-        {/* PERUBAHAN: Tombol Play disesuaikan dengan gambar */}
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <div className="flex items-center gap-2 rounded-full bg-custom-yellow px-4 py-2 text-gray-900 shadow-md transition-transform duration-300 group-hover:scale-110">
+        <div className="pointer-events-none absolute bottom-5 left-5">
+          <div
+            className="flex items-center gap-2 rounded-full bg-lime-400 px-4 py-2 text-gray-900 shadow-lg transition-transform duration-300 group-hover:scale-110"
+          >
             <FaPlay size={12} />
             <span className="text-sm font-semibold">Play</span>
           </div>
         </div>
       </button>
 
-      {/* Akhir: Thumbnail Video */}
-
-      {/* Bagian Modal (tidak berubah) */}
+      {/* Modal Video (tidak ada perubahan) */}
       <Transition show={modalOpen} as="div">
         <Dialog initialFocus={videoRef} onClose={() => setModalOpen(false)}>
           <Transition.Child
@@ -95,13 +73,7 @@ export default function ModalVideo({
           >
             <div className="mx-auto flex h-full max-w-6xl w-full items-center">
               <Dialog.Panel className="aspect-video max-h-full w-full overflow-hidden rounded-2xl bg-black shadow-2xl">
-                <video
-                  ref={videoRef}
-                  width={videoWidth}
-                  height={videoHeight}
-                  loop
-                  controls
-                >
+                <video ref={videoRef} width={videoWidth} height={videoHeight} loop controls>
                   <source src={video} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>

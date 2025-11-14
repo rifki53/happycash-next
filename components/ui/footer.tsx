@@ -5,7 +5,7 @@ import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-custom-slate text-white">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Logo */}
         <div className="pt-12">
@@ -65,7 +65,7 @@ export default function Footer() {
                   href="tel:09102626060"
                   className="text-slate-200 hover:text-white transition"
                 >
-                  09102626060
+                  (+63)9102626060
                 </a>
               </li>
               <li>
@@ -73,7 +73,7 @@ export default function Footer() {
                   href="tel:09085848852"
                   className="text-slate-200 hover:text-white transition"
                 >
-                  09085848852
+                  (+63)9085848852
                 </a>
               </li>
             </ul>

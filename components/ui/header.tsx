@@ -20,27 +20,42 @@ export default function Header() {
           {/* Links are centered */}
           <ul className="flex grow flex-wrap items-center justify-center gap-6 text-sm lg:gap-10">
             <li>
-              <Link href="/about" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">
+              <Link
+                href="/about"
+                className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900"
+              >
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="/user-story" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">
+              <Link
+                href="/user-story"
+                className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900"
+              >
                 User Story
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">
+              <Link
+                href="/blog"
+                className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900"
+              >
                 Blog
               </Link>
             </li>
             <li>
-              <Link href="/security" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">
+              <Link
+                href="/security"
+                className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900"
+              >
                 Account Security
               </Link>
             </li>
             <li>
-              <Link href="/faq" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">
+              <Link
+                href="/faq"
+                className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900"
+              >
                 FAQ
               </Link>
             </li>
@@ -48,16 +63,28 @@ export default function Header() {
         </nav>
 
         {/* "Get the App" button on the right - hidden on mobile */}
-        <div className="hidden md:flex md:items-center">
-           <Link href="/get-the-app" className="rounded-lg bg-gray-800 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-gray-900">
-              Get the App
-           </Link>
-        </div>
+        {/* <div className="hidden md:flex md:items-center">
+          <Link
+            href="/get-the-app"
+            className="rounded-lg bg-custom-slate px-5 py-2.5 text-sm font-medium text-custom-yellow shadow-sm hover:bg-gray-900"
+          >
+            Get the App
+          </Link>
+        </div> */}
 
         {/* Mobile menu hamburger button - only visible on mobile */}
-        <div className="md:hidden">
-            <MobileMenu />
-        </div>
+        <ul className="flex flex-1 items-center justify-end gap-3">
+          <li>
+            <Link
+              href="/get-the-app"
+              className="rounded-lg bg-custom-slate px-5 py-2.5 text-sm font-medium text-custom-yellow shadow-sm hover:bg-gray-900"
+            >
+              Get the App
+            </Link>
+          </li>
+        </ul>
+
+        <MobileMenu />
       </div>
     </header>
   );

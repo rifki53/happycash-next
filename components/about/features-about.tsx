@@ -9,7 +9,7 @@ export default function FeatureAbout() {
     <section className="bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
         {/* Card utama */}
-        <div className="bg-slate-900 rounded-3xl overflow-hidden">
+        <div className="bg-custom-slate rounded-3xl overflow-hidden">
           <div className="flex flex-col md:flex-row items-center justify-center">
             
             {/* Kolom Kiri: Peta */}
