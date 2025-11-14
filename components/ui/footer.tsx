@@ -57,8 +57,8 @@ export default function Footer() {
                 <div>
                   <h3 className="mb-2 font-semibold text-lime-400">Hotline</h3>
                   <ul className="space-y-1 text-slate-200">
-                    <li><a href="tel:09102626060" className="transition hover:text-white">09102626060</a></li>
-                    <li><a href="tel:09085848852" className="transition hover:text-white">09085848852</a></li>
+                    <li><a href="tel:+639102626060" className="transition hover:text-white">(+63)9102626060</a></li>
+                    <li><a href="tel:+639085848852" className="transition hover:text-white">(+63)9085848852</a></li>
                   </ul>
                 </div>
                 <div>
