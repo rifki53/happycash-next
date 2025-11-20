@@ -1,7 +1,8 @@
+// components/ui/header.tsx (atau lokasi file Anda)
+
 import Link from "next/link";
 import Image from "next/image";
 import MobileMenu from "./mobile-menu";
-import Logo from "@/public/logo-with-text.png"
 
 export default function Header() {
   return (
@@ -10,7 +11,7 @@ export default function Header() {
         <div className="flex-shrink-0">
           <Link href="/" className="inline-flex" aria-label="Happycash">
             <Image
-              src={Logo}
+              src="/logo-with-text.png"
               width={150}
               height={28}
               alt="Happycash logo"
