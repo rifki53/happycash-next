@@ -10,7 +10,7 @@ interface LogoProps {
 export default function Logo({ isWhite = false }: LogoProps) {
   // Tentukan path gambar berdasarkan nilai props isWhite
   const logoSrc = isWhite
-    ? "/logo-white-with-text.png"
+    ? "/logo-with-text-white.png"
     : "/logo-with-text.png";
 
   return (
@@ -19,7 +19,6 @@ export default function Logo({ isWhite = false }: LogoProps) {
         src={logoSrc}
         width={150}
         height={28}
-        priority // Tambahkan priority jika logo ada di LCP (Largest Contentful Paint)
         alt="Happycash logo"
       />
     </Link>
