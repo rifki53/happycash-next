@@ -4,12 +4,12 @@ import Image from "next/image";
 
 export default function LogoWhite() {
   return (
-    <Link href="/" className="inline-flex" aria-label="Happycash">
+    <Link href="/" className="inline-flex" aria-label="Happycash-logo">
       <Image
         src="/logo-with-text-white.png"
         width={150}
         height={28}
-        alt="Happycash logo"
+        alt="Happycash-logo"
       />
     </Link>
   );

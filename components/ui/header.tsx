@@ -14,7 +14,8 @@ export default function Header() {
               src="/logo-with-text.png"
               width={150}
               height={28}
-              alt="Happycash logo"
+              className="w-auto object-contain"
+              alt="Happycash-logo"
             />
           </Link>
         </div>
