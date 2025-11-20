@@ -1,7 +1,7 @@
 import HeroAbout from "@/components/about/hero-about";
-import Features from "@/components/home/features";
-import StepByStep from "@/components/home/step-by-step";
 import PrivacySection from "@/components/security/privacy-section";
+import SecurityTips from "@/components/security/security-tips";
+import StaySecure from "@/components/security/stay-secure";
 
 export const metadata = {
   title: "Home - Simple",
@@ -13,8 +13,8 @@ export default function Home() {
     <>
       <HeroAbout />
       <PrivacySection />
-      <Features />
-      <StepByStep />
+      <SecurityTips />
+      <StaySecure />
     </>
   );
 }

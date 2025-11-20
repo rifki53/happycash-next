@@ -4,30 +4,30 @@ const PrivacySection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
         {/* Centered content container */}
         <div className="max-w-3xl mx-auto text-center">
-          
           {/* Section Title */}
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Data Security and Privacy Compliance
           </h2>
-          
+
           {/* Paragraph Text */}
           <p className="text-lg text-gray-600 mb-8">
-            In compliance with the Data Privacy Act of 2012 (Republic Act No. 10173),
-            as well as guidelines set forth by the Securities and Exchange Commission (SEC)
-            and the National Privacy Commission (NPC), we are committed to protecting
-            your personal information and financial security. Your trust is of utmost
-            importance to us, and we implement robust security measures to safeguard
-            your data in accordance with the highest standards of confidentiality and privacy.
+            In compliance with the Data Privacy Act of 2012 (Republic Act No.
+            10173), as well as guidelines set forth by the Securities and Ep
+            xchange Commission (SEC) and the National Privacy Commission (NPC),
+            we are committed to protecting your personal information and
+            financial security. Your trust is of utmost importance to us, and we
+            implement robust security measures to safeguard your data in
+            accordance with the highest standards of confidentiality and
+            privacy.
           </p>
-          
+
           {/* Privacy Agreement Button */}
           <a
             href="/privacy-policy" // Change this to the actual link for your privacy agreement
-            className="inline-block bg-[#0A252C] text-white font-semibold px-8 py-3 rounded-md shadow-md hover:bg-gray-800 transition-colors duration-300"
+            className="inline-block bg-[#0A252C] text-custom-yellow font-semibold px-8 py-3 rounded-md shadow-md hover:bg-gray-800 transition-colors duration-300"
           >
             Privacy Agreement
           </a>
-          
         </div>
       </div>
     </section>

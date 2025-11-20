@@ -173,9 +173,46 @@ export async function getStrapiPostBySlug(slug: string) {
 }
 
 /**
+ * Mengambil artikel terbaru untuk bagian "More Articles".
+ * Fungsi ini mengambil 3 artikel terbaru, tidak termasuk artikel yang sedang dibuka.
+ */
+export async function getStrapiMoreArticles(
+  currentSlug: string
+): Promise<Post[]> {
+  logDebug(`Fetching more articles, excluding slug: ${currentSlug}`);
+
+  const moreArticlesUrl = new URL(`${STRAPI_API_URL}/api/articles`);
+  moreArticlesUrl.searchParams.set("populate", "*");
+  moreArticlesUrl.searchParams.set("sort[0]", "publishedAt:desc");
+  moreArticlesUrl.searchParams.set("pagination[limit]", "3"); // Ambil 3 artikel terbaru
+  moreArticlesUrl.searchParams.set("filters[slug][$ne]", currentSlug); // Kecualikan post saat ini
+
+  try {
+    const response = await fetch(moreArticlesUrl.toString(), {
+      next: { revalidate: 3600 },
+    });
+    if (!response.ok) {
+      throw new Error("Gagal mengambil data untuk 'More Articles'.");
+    }
+
+    const jsonResponse = await response.json();
+    if (!jsonResponse.data) return [];
+
+    return jsonResponse.data.map(transformStrapiData);
+  } catch (error) {
+    console.error("Error fetching more articles:", error);
+    return [];
+  }
+}
+
+/**
  * Fungsi utilitas untuk memformat tanggal, bisa digunakan di mana saja.
  */
 export function formatDate(dateString: string): string {
-    const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "long", day: "numeric" };
-    return new Date(dateString).toLocaleDateString("id-ID", options);
-};
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  return new Date(dateString).toLocaleDateString("id-ID", options);
+}
