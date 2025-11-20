@@ -1,7 +1,7 @@
 // components/Footer.tsx
 import Link from "next/link";
-import Logo from "./logo";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import LogoWhite from "./logo-white";
 
 export default function Footer() {
   return (
@@ -13,7 +13,7 @@ export default function Footer() {
             {/* 1st block: Logo and Socials */}
             <div className="md:col-span-1">
               <div className="mb-4">
-                <Logo isWhite={true} />
+                <LogoWhite />
               </div>
               <div className="mt-6">
                 <h4 className="text-sm text-slate-200 mb-2">

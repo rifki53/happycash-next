@@ -12,7 +12,7 @@ export default function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
         {/* Site branding (Logo) */}
         <div className="flex-shrink-0">
-          <Logo isWhite={false} />
+          <Logo />
         </div>
 
         {/* Desktop navigation - hidden on mobile */}
