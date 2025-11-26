@@ -1,92 +1,98 @@
 // components/Hero.tsx
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-// Import your images from the public directory
-import heroWoman from "@/public/images/hero-home/hero-woman-illustration@2x.png";
-import appStoreButton from "@/public/images/hero-home/button-app-store@2x.png";
-import googlePlayButton from "@/public/images/hero-home/button-google-play@2x.png";
+// Import gambar Anda dari direktori public
+import homepage from "@/public/images/hero-banner/homepage@2x.png";
 import qrCode from "@/public/images/hero-home/qr-code-app-stores.png";
+// Menggunakan logo transparan seperti di referensi
+import androidLogo from "@/public/images/hero-home/android-cta-logo.png";
+import iosLogo from "@/public/images/hero-home/ios-cta-logo.png";
 
-export default function HeroHome() {
-  const [isQrVisible, setQrVisible] = useState(false);
+// Data untuk tombol download disesuaikan dengan referensi
+const downloadButtons = [
+  {
+    href: "#",
+    logo: iosLogo,
+    alt: "Download on the App Store",
+  },
+  {
+    href: "#",
+    logo: androidLogo,
+    alt: "Get it on Google Play",
+  },
+];
 
+export default function Hero() {
   return (
-    // Jadikan <section> sebagai konteks pemosisian (relative)
-    // overflow-hidden akan memastikan gambar tidak keluar dari section
-    <section className="relative bg-custom-darkgreen text-white overflow-hidden">
-      {/* Wadah untuk konten teks, tetap terpusat dan terbatas lebarnya */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        {/* Batasi konten teks hanya di sisi kiri pada tampilan desktop */}
-        <div className="md:w-1/2 py-8">
-          <div className="py-12 md:py-20 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tighter tracking-tighter mb-4">
-              <span className="text-lime-400">Happy Cash,</span> Happy Life
+    <section className="bg-custom-darkgreen">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="grid items-center gap-8 py-12 md:grid-cols-2 md:py-20">
+          {/* Kolom Konten Teks */}
+          <div className="text-center md:text-left">
+            <h1 className="mb-4 text-5xl font-extrabold leading-tight text-white md:text-6xl">
+              <span className="text-custom-yellow">Happy Cash,</span>
+              <br />
+              Happy Life
             </h1>
-            <p className="text-lg text-gray-300 mb-8 max-w-md mx-auto md:mx-0">
-              Happycash is dedicated to improving the lives of Filipinos ensuring transparency, fairness, and responsibility. Instant financial aid available anytime, with just one valid ID.
-            </p>
+            <div className="mx-auto max-w-lg md:mx-0">
+              <p className="mb-8 text-lg text-gray-300">
+                Happycash is dedicated to improving the lives of Filipinos
+                ensuring transparency, fairness, and responsibility. Instant
+                financial aid available anytime, with just one valid ID.
+              </p>
+            </div>
 
-            {/* Grup tombol dengan hover QR */}
-            <div
-              className="relative inline-flex flex-col items-center"
-              onMouseEnter={() => setQrVisible(true)}
-              onMouseLeave={() => setQrVisible(false)}
-            >
-              {/* Popup Kode QR (Hanya Desktop) */}
-              <div
-                className={`
-                  hidden md:flex justify-center
-                  absolute bottom-full mb-4 w-full
-                  transition-all duration-300 ease-in-out
-                  ${isQrVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}
-                `}
-              >
-                <div className="bg-white p-3 rounded-lg shadow-2xl">
-                  <Image src={qrCode} width={128} height={128} alt="Download App QR Code" />
-                </div>
-              </div>
+            {/* === Tombol Aplikasi DIBUAT ULANG sesuai referensi === */}
+            <div className="mt-6 flex justify-center gap-4 md:justify-start">
+              {downloadButtons.map((button, index) => (
+                <Link
+                  key={index}
+                  href={button.href}
+                  aria-label={button.alt}
+                  className="group relative flex items-center justify-center rounded-xl bg-custom-yellow  p-3 transition-all duration-200 hover:bg-custom-yellow md:hover:rounded-b-xl md:hover:rounded-t-none"
+                >
+                  {/* Logo di dalam tombol (dibuat putih dengan 'invert') */}
+                  <Image
+                    src={button.logo}
+                    alt={button.alt}
+                    className="h-[29px] w-auto"
+                  />
 
-              {/* Tombol Aplikasi */}
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link href="#download-app-store" aria-label="Get on App Store">
-                  <Image src={appStoreButton} alt="Get on App Store" width={160} className="h-auto" />
+                  {/* Popup Kode QR */}
+                  <div
+                    className="
+                      absolute bottom-full left-0 right-0 z-20
+                      hidden justify-center rounded-t-xl bg-white
+                      px-4 pt-4 pb-2 shadow-lg
+                      md:group-hover:flex"
+                  >
+                    <Image
+                      src={qrCode}
+                      width={120}
+                      height={120}
+                      alt="Download App QR Code"
+                    />
+                  </div>
                 </Link>
-                <Link href="#download-google-play" aria-label="Get on Google Play">
-                  <Image src={googlePlayButton} alt="Get on Google Play" width={160} className="h-auto" />
-                </Link>
-              </div>
+              ))}
             </div>
           </div>
+
+          {/* Kolom Gambar */}
+          <div className="flex items-center justify-center">
+            <Image
+              src={homepage}
+              alt="Happy Cash hero banner"
+              width={550}
+              height={550}
+              className="h-auto w-full"
+              priority
+            />
+          </div>
         </div>
-      </div>
-
-      {/* Gambar yang diposisikan secara absolut untuk desktop */}
-      {/* Kelas 'hidden md:block' membuatnya hanya muncul di layar medium ke atas */}
-      <div className="absolute top-0 right-0 h-full w-1/2 hidden md:block">
-        <Image
-          src={heroWoman}
-          alt="A happy woman feeling financially secure"
-          layout="fill"
-          objectFit="contain"
-          objectPosition="right bottom"
-          priority
-        />
-      </div>
-
-      {/* Gambar statis untuk tampilan mobile */}
-      <div className="md:hidden">
-        <Image
-          src={heroWoman}
-          alt="A happy woman feeling financially secure"
-          width={500}
-          height={500}
-          priority
-          className="h-auto w-full"
-        />
       </div>
     </section>
   );
