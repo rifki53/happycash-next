@@ -139,7 +139,7 @@ export default function Testimonials() {
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
               Why They Love Us
             </h2>
-            <p className="text-3xl font-bold text-custom-yellow md:text-4xl">
+            <p className="text-3xl font-bold text-custom-yellow md:text-4xl md:pb-12 pb-2">
               Real Comments
             </p>
           </div>
