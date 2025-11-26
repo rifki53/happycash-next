@@ -1,8 +1,7 @@
-// components/HeroAbout.tsx
 import Image from "next/image";
-import hero from "@/public/images/hero-banner/about-us@1.5x.png";
+import hero from "@/public/images/hero-banner/blog@1.5x.png";
 
-export default function HeroAbout() {
+export default function HeroBlog() {
   return (
     <section className="bg-custom-darkgreen">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -10,6 +9,8 @@ export default function HeroAbout() {
           <div className="text-center md:text-left order-last md:order-first">
             <h1 className="mb-4 text-4xl font-extrabold leading-tight tracking-tighter text-white md:text-5xl">
               <span className="text-custom-yellow">Fast Digital Credit</span> for
+
+              
               Filipinos
             </h1>
             <div className="mx-auto max-w-lg md:mx-0">

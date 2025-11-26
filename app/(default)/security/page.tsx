@@ -1,4 +1,4 @@
-import HeroAbout from "@/components/about/hero-about";
+import HeroSecurity from "@/components/security/hero-security";
 import PrivacySection from "@/components/security/privacy-section";
 import SecurityTips from "@/components/security/security-tips";
 import StaySecure from "@/components/security/stay-secure";
@@ -11,7 +11,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <HeroAbout />
+      <HeroSecurity />
       <PrivacySection />
       <SecurityTips />
       <StaySecure />

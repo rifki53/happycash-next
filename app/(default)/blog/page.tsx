@@ -2,6 +2,7 @@ import { getStrapiPosts, getStrapiCategories } from "@/hooks/strapi";
 import type { Category } from "@/hooks/strapi";
 
 import BlogList from "@/components/mdx/blog-list";
+import HeroBlog from "@/components/mdx/hero-blog";
 
 interface BlogPageProps {
   searchParams: {
@@ -22,6 +23,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   return (
     <>
       <section className="relative">
+        <HeroBlog />
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="mx-auto pt-10 pb-12 md:pb-20">
             <BlogList
