@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import almaAImage from "@/public/images/customers/alma-a.jpg";
 import andyDuaveImage from "@/public/images/customers/andy-duave.jpg";
 import chikoChiImage from "@/public/images/customers/chiko-chi.jpg";
@@ -20,28 +20,28 @@ import lourdesCaspeImage from "@/public/images/customers/lourdes-caspe-(cling-cl
 import melanieAgarImage from "@/public/images/customers/melanie-agar.jpg";
 import vincentSyImage from "@/public/images/customers/vincent-sy.jpg";
 import { FaStar } from "react-icons/fa";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 export default function Testimonials() {
   const testimonials = [
-    // ... (data testimoni Anda tetap sama)
     {
       name: "Kat kat",
       quote:
-        "very recommendable! has low interest fees, and you can pay the loan for up to 3 months, but once you're late even just for 1 day, they won't allow you to reloan anymore even if you paid on time afterwards. but still very recommendable. they don't charge excessive fees when it's late, unlike other loan apps",
+        "very recommendable! has low interest fees, and you can pay the loan for up to 3 months. they don't charge excessive fees when it's late, unlike other loan apps",
       rating: 5,
       image: katkatImage,
     },
     {
       name: "Levy Madriaga",
       quote:
-        "This one is the best when it comes to terms and conditions. You worry no more because this is a 1 month pay rule and take note it depends on you if you want to pay it full that's good ,but if you want to pay on 2 terms it is good also, but the most important thing is you have to pay on time just to have a good record Low interet as it's finest! Happycash Thank you! I will rate this app 10 stars",
+        "This one is the best when it comes to terms and conditions. the most important thing is you have to pay on time just to have a good record Low interet as it's finest! Happycash Thank you! I will rate this app 10 stars",
       rating: 5,
       image: levyMadriagaImage,
     },
     {
       name: "Melanie Agar",
       quote:
-        "I am happy i was approove to borrow 4,600 fr this app but i don't know if the interest is high or low because there is click button to borrow and i am afraid to press the button. because i was scammed by other ONLINE LENDING APP before , i pressed the button and suddenly appeared that the money i borrowed amounting 2,925 became 4,988 . they doubled the interest and they obliged me to pay it in just 7 days but the said tenor was 150 days.",
+        "I am happy i was approove to borrow 4,600 fr this app. there is click button to borrow and i am afraid to press the button. because i was scammed by other ONLINE LENDING APP before ,but this one is different.",
       rating: 5,
       image: melanieAgarImage,
     },
@@ -97,7 +97,7 @@ export default function Testimonials() {
     {
       name: "Alma A",
       quote:
-        "I was short with the budget and school fees are near of dues and I'm looking for an online app that didn't harass or call many times and no higher interest rate and I found happy cash with more good reviews. I am a one of Happy Cash customer and I truly loved this app. I highly recommend this loan app to everyone.",
+        "I was short with the budget and school fees are near of dues and I'm looking for an online app that didn't harass and no higher interest rate and I found happy cash. I truly loved this app. I highly recommend this loan app to everyone.",
       rating: 5,
       image: almaAImage,
     },
@@ -135,8 +135,7 @@ export default function Testimonials() {
     <section className="bg-custom-darkgreen">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="py-12 md:py-20">
-          {/* Section header */}
-          <div className="mx-auto max-w-3xl pb-12 text-center">
+          <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
               Why They Love Us
             </h2>
@@ -145,13 +144,26 @@ export default function Testimonials() {
             </p>
           </div>
 
-          {/* Testimonials slider */}
+          {/* === PERUBAHAN DI SINI === */}
+          <div className="mb-4 flex justify-between md:hidden">
+            <button className="testimonial-swiper-button-prev flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white transition hover:bg-white/30">
+              <FiChevronLeft size={24} />
+            </button>
+            <button className="testimonial-swiper-button-next flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white transition hover:bg-white/30">
+              <FiChevronRight size={24} />
+            </button>
+          </div>
+
           <div className="testimonials-slider">
             <Swiper
-              modules={[Pagination, Autoplay]}
+              modules={[Pagination, Navigation, Autoplay]}
               spaceBetween={30}
               slidesPerView={1}
               slidesPerGroup={1}
+              navigation={{
+                nextEl: ".testimonial-swiper-button-next",
+                prevEl: ".testimonial-swiper-button-prev",
+              }}
               pagination={{
                 el: ".testimonial-pagination",
                 clickable: true,
@@ -176,12 +188,7 @@ export default function Testimonials() {
             >
               {testimonials.map((testimonial, index) => (
                 <SwiperSlide key={index}>
-                  {/* 
-                    PERUBAHAN DI SINI:
-                    - Menghapus 'h-full'
-                    - Menambahkan tinggi tetap 'h-96' (384px)
-                  */}
-                  <div className="flex h-96 flex-col rounded-lg bg-white p-6 shadow-xl">
+                  <div className="flex min-h-65 flex-col rounded-lg bg-white p-6 shadow-xl">
                     <div className="mb-4 flex items-center">
                       <Image
                         className="mr-4 h-12 w-12 rounded-full object-cover"
@@ -212,27 +219,30 @@ export default function Testimonials() {
             </Swiper>
           </div>
 
-          {/* Slider pagination */}
-          <div className="testimonial-pagination mt-12 text-center"></div>
+          <div className="testimonial-pagination mt-12 text-center hidden md:block"></div>
         </div>
       </div>
 
-      {/* Custom styles for pagination bars */}
       <style jsx global>{`
-        /* ... (style Anda tetap sama) ... */
         .testimonial-pagination .swiper-pagination-bullet {
-          width: 2.5rem; /* 40px */
-          height: 0.25rem; /* 4px */
-          border-radius: 0.125rem; /* 2px */
-          background-color: transparent;
+          width: 2.5rem;
+          height: 0.25rem;
+          border-radius: 0.125rem;
+          background-color: white;
           border: 1px solid white;
           opacity: 1;
           transition: background-color 0.3s ease;
+          margin: 0 0.2rem;
         }
 
         .testimonial-pagination .swiper-pagination-bullet-active {
-          background-color: #a3e635; /* lime-400 */
-          border-color: #a3e635; /* lime-400 */
+          background-color: #a3e635;
+          border-color: #a3e635;
+        }
+
+        .swiper-button-disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
         }
       `}</style>
     </section>

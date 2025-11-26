@@ -1,3 +1,4 @@
+// components/ui/mobile-menu.tsx
 "use client";
 
 import { useState, useRef, useEffect } from "react";
@@ -10,9 +11,9 @@ export default function MobileMenu() {
   const trigger = useRef<HTMLButtonElement>(null);
   const mobileNav = useRef<HTMLDivElement>(null);
 
-  // close the mobile menu on click outside
+  // Close the mobile menu on click outside
   useEffect(() => {
-    const clickHandler = ({ target }: { target: EventTarget | null }): void => {
+    const clickHandler = ({ target }: MouseEvent): void => {
       if (!mobileNav.current || !trigger.current) return;
       if (
         !mobileNavOpen ||
@@ -26,9 +27,9 @@ export default function MobileMenu() {
     return () => document.removeEventListener("click", clickHandler);
   });
 
-  // close the mobile menu if the esc key is pressed
+  // Close the mobile menu if the esc key is pressed
   useEffect(() => {
-    const keyHandler = ({ keyCode }: { keyCode: number }): void => {
+    const keyHandler = ({ keyCode }: KeyboardEvent): void => {
       if (!mobileNavOpen || keyCode !== 27) return;
       setMobileNavOpen(false);
     };
@@ -37,61 +38,52 @@ export default function MobileMenu() {
   });
 
   return (
-    <div className="flex md:hidden">
-      {/* Hamburger button */}
+    <div className="flex md:hidden ml-3">
       <button
         ref={trigger}
-        className={`group inline-flex h-8 w-8 items-center justify-center bg-white text-center text-gray-800 transition ${mobileNavOpen && "active"}`}
+        className={`group relative h-8 w-8 flex items-center justify-center`}
         aria-controls="mobile-nav"
         aria-expanded={mobileNavOpen}
         onClick={() => setMobileNavOpen(!mobileNavOpen)}
       >
         <span className="sr-only">Menu</span>
-        <svg
-          className="pointer-events-none fill-current"
-          width={16}
-          height={16}
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            className="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] translate-x-[7px] group-aria-expanded:rotate-[315deg] group-aria-expanded:translate-y-0 group-aria-expanded:translate-x-0"
-            y="7"
-            width="9"
-            height="2"
-            rx="1"
-          ></rect>
-          <rect
-            className="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)] group-aria-expanded:rotate-45"
-            y="7"
-            width="16"
-            height="2"
-            rx="1"
-          ></rect>
-          <rect
-            className="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] translate-y-[5px] group-aria-expanded:rotate-[135deg] group-aria-expanded:translate-y-0"
-            y="7"
-            width="9"
-            height="2"
-            rx="1"
-          ></rect>
-        </svg>
+        <div className="flex flex-col justify-between w-6 h-6">
+          <span
+            className={`block h-0.5 w-full bg-gray-800 transform transition duration-300 ease-in-out ${
+              mobileNavOpen ? "rotate-45 translate-y-2.5" : ""
+            }`}
+          ></span>
+          <span
+            className={`block h-0.5 w-full bg-gray-800 transition duration-300 ease-in-out ${
+              mobileNavOpen ? "opacity-0" : ""
+            }`}
+          ></span>
+          <span
+            className={`block h-0.5 w-full bg-gray-800 transform transition duration-300 ease-in-out ${
+              mobileNavOpen ? "-rotate-45 -translate-y-2.5" : ""
+            }`}
+          ></span>
+        </div>
       </button>
 
-      {/*Mobile navigation */}
       <div ref={mobileNav}>
         <Transition
           show={mobileNavOpen}
           as="nav"
           id="mobile-nav"
-          className="absolute left-0 top-full z-20 w-full rounded-xl bg-white shadow-lg shadow-black/[0.03] before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(var(--color-gray-100),var(--color-gray-200))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] transform transition ease-out duration-200 data-enter:data-closed:-translate-y-2 data-closed:opacity-0"
+          className="absolute left-0 top-full z-20 w-full overflow-hidden"
+          enter="transition ease-out duration-200"
+          enterFrom="opacity-0 -translate-y-2"
+          enterTo="opacity-100 translate-y-0"
+          leave="transition ease-out duration-200"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
         >
-          {/* === PERUBAHAN HANYA DI DALAM <UL> INI === */}
-          <ul className="p-2 text-sm">
+          <ul className="bg-white p-2 text-sm shadow-lg">
             <li>
               <Link
                 href="/about"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
+                className="flex rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100"
                 onClick={() => setMobileNavOpen(false)}
               >
                 About Us
@@ -100,7 +92,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="/user-story"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
+                className="flex rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100"
                 onClick={() => setMobileNavOpen(false)}
               >
                 User Story
@@ -109,7 +101,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="/blog"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
+                className="flex rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100"
                 onClick={() => setMobileNavOpen(false)}
               >
                 Blog
@@ -118,7 +110,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="/security"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
+                className="flex rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100"
                 onClick={() => setMobileNavOpen(false)}
               >
                 Account Security
@@ -127,7 +119,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="/faq"
-                className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
+                className="flex rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100"
                 onClick={() => setMobileNavOpen(false)}
               >
                 FAQ

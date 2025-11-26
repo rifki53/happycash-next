@@ -1,12 +1,16 @@
-// components/ui/header.tsx (atau lokasi file Anda)
+// components/ui/header.tsx
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import MobileMenu from "./mobile-menu";
 
 export default function Header() {
+  const pathname = usePathname();
+
   return (
-    <header className="fixed top-0 z-30 w-full bg-white shadow-md">
+    <header className="fixed top-0 z-30 w-full bg-white shadow-md border-b border-gray-200">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
         <div className="flex-shrink-0">
           <Link href="/" className="inline-flex" aria-label="Happycash">
@@ -25,7 +29,11 @@ export default function Header() {
             <li>
               <Link
                 href="/about"
-                className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900"
+                className={`flex items-center border-b-2 py-2 transition duration-150 ease-in-out ${
+                  pathname === "/about"
+                    ? "border-custom-darkgreen text-gray-900"
+                    : "border-transparent text-gray-600 hover:text-gray-900"
+                }`}
               >
                 About Us
               </Link>
@@ -33,7 +41,11 @@ export default function Header() {
             <li>
               <Link
                 href="/user-story"
-                className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900"
+                className={`flex items-center border-b-2 py-2 transition duration-150 ease-in-out ${
+                  pathname === "/user-story"
+                    ? "border-custom-darkgreen text-gray-900"
+                    : "border-transparent text-gray-600 hover:text-gray-900"
+                }`}
               >
                 User Story
               </Link>
@@ -41,7 +53,11 @@ export default function Header() {
             <li>
               <Link
                 href="/blog"
-                className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900"
+                className={`flex items-center border-b-2 py-2 transition duration-150 ease-in-out ${
+                  pathname === "/blog"
+                    ? "border-custom-darkgreen text-gray-900"
+                    : "border-transparent text-gray-600 hover:text-gray-900"
+                }`}
               >
                 Blog
               </Link>
@@ -49,7 +65,11 @@ export default function Header() {
             <li>
               <Link
                 href="/security"
-                className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900"
+                className={`flex items-center border-b-2 py-2 transition duration-150 ease-in-out ${
+                  pathname === "/security"
+                    ? "border-custom-darkgreen text-gray-900"
+                    : "border-transparent text-gray-600 hover:text-gray-900"
+                }`}
               >
                 Account Security
               </Link>
@@ -57,7 +77,11 @@ export default function Header() {
             <li>
               <Link
                 href="/faq"
-                className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900"
+                className={`flex items-center border-b-2 py-2 transition duration-150 ease-in-out ${
+                  pathname === "/faq"
+                    ? "border-custom-darkgreen text-gray-900"
+                    : "border-transparent text-gray-600 hover:text-gray-900"
+                }`}
               >
                 FAQ
               </Link>
@@ -65,18 +89,19 @@ export default function Header() {
           </ul>
         </nav>
 
-        <ul className="flex flex-1 items-center justify-end gap-3">
-          <li>
-            <Link
-              href="/get-the-app"
-              className="rounded-lg bg-custom-slate px-5 py-2.5 text-sm font-medium text-custom-yellow shadow-sm hover:bg-gray-900"
-            >
-              Get the App
-            </Link>
-          </li>
-        </ul>
-
-        <MobileMenu />
+        <div className="flex items-center justify-end md:flex-1">
+          <ul className="flex items-center gap-3">
+            <li>
+              <Link
+                href="/get-the-app"
+                className="rounded-lg bg-custom-darkgreen px-5 py-2.5 text-sm font-medium text-custom-yellow shadow-sm hover:bg-gray-900"
+              >
+                Get the App
+              </Link>
+            </li>
+          </ul>
+          <MobileMenu />
+        </div>
       </div>
     </header>
   );
