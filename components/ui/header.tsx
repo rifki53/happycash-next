@@ -93,7 +93,7 @@ export default function Header() {
           <ul className="flex items-center gap-3">
             <li>
               <Link
-                href="/get-the-app"
+                href="/get-app"
                 className="rounded-lg bg-custom-darkgreen px-5 py-2.5 text-sm font-medium text-custom-yellow shadow-sm hover:bg-gray-900"
               >
                 Get the App
