@@ -1,10 +1,11 @@
-// lib/strapi.ts
+// hooks/strapi.ts
 
-import { notFound } from 'next/navigation';
+import { notFound } from "next/navigation";
 
 // --- Konstanta & Tipe Data ---
-const STRAPI_API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL || "https://cms.adapundi.com";
-const DEBUG = process.env.NODE_ENV === 'development';
+const STRAPI_API_URL =
+  process.env.NEXT_PUBLIC_STRAPI_API_URL || "https://cms.adapundi.com";
+const DEBUG = process.env.NODE_ENV === "development";
 
 // --- Tipe Data ---
 export interface PostSummary {
@@ -34,21 +35,20 @@ export interface Category {
   name: string;
 }
 
-
 // --- Fungsi Helper Internal ---
 function logDebug(...args: any[]) {
   if (DEBUG) console.debug("[Strapi API]", ...args);
 }
 
 const calculateReadingTime = (blocks: any[] | null): number => {
-    if (!blocks || !blocks.length) return 1;
-    const richTextBlock = blocks.find(
-      (block) => block.__component === "shared.rich-text"
-    );
-    if (!richTextBlock || !richTextBlock.body) return 1;
-    const words = richTextBlock.body.split(/\s+/).length;
-    const wordsPerMinute = 225;
-    return Math.ceil(words / wordsPerMinute);
+  if (!blocks || !blocks.length) return 1;
+  const richTextBlock = blocks.find(
+    (block) => block.__component === "shared.rich-text"
+  );
+  if (!richTextBlock || !richTextBlock.body) return 1;
+  const words = richTextBlock.body.split(/\s+/).length;
+  const wordsPerMinute = 225;
+  return Math.ceil(words / wordsPerMinute);
 };
 
 /**
@@ -62,21 +62,23 @@ function transformStrapiData(item: any): Post {
   // Menggunakan gambar format 'small' untuk list, dan fallback ke URL utama
   const imageUrl = item.cover?.formats?.small?.url
     ? `${STRAPI_API_URL}${item.cover.formats.small.url}`
-    : (item.cover?.url ? `${STRAPI_API_URL}${item.cover.url}` : null);
+    : item.cover?.url
+    ? `${STRAPI_API_URL}${item.cover.url}`
+    : null;
 
   return {
     slug: item.slug,
     content: richTextBlock ? richTextBlock.body : "",
     metadata: {
       title: item.title,
-      description: item.description || '',
+      description: item.description || "",
       publishedAt: item.publishedAt,
       updatedAt: item.updatedAt,
       author: item.author?.name || "Adapundi Team",
       category: item.category?.name || "General",
       image: imageUrl,
       readingTime: calculateReadingTime(item.blocks),
-    }
+    },
   };
 }
 
@@ -93,7 +95,10 @@ export async function getStrapiCategories(): Promise<Category[]> {
     const response = await fetch(url, { next: { revalidate: 3600 } }); // Cache 1 jam
     if (!response.ok) throw new Error("Gagal mengambil kategori.");
     const jsonResponse = await response.json();
-    return jsonResponse.data.map((cat: any) => ({ id: cat.id, name: cat.name })) || [];
+    return (
+      jsonResponse.data.map((cat: any) => ({ id: cat.id, name: cat.name })) ||
+      []
+    );
   } catch (error) {
     console.error("Error fetching categories:", error);
     return [];
@@ -104,7 +109,7 @@ export async function getStrapiCategories(): Promise<Category[]> {
  * Mengambil semua postingan blog dari Strapi, dengan opsi filter berdasarkan kategori.
  */
 export async function getStrapiPosts(categoryName?: string): Promise<Post[]> {
-  logDebug(`Fetching posts for category: ${categoryName || 'All'}`);
+  logDebug(`Fetching posts for category: ${categoryName || "All"}`);
   let url = `${STRAPI_API_URL}/api/articles?populate=*&sort[0]=publishedAt:desc`;
 
   if (categoryName && categoryName !== "All") {
@@ -114,8 +119,9 @@ export async function getStrapiPosts(categoryName?: string): Promise<Post[]> {
   try {
     // Gunakan revalidate 60 detik untuk daftar post agar lebih sering update
     const response = await fetch(url, { next: { revalidate: 60 } });
-    if (!response.ok) throw new Error("Gagal mengambil daftar post dari Strapi.");
-    
+    if (!response.ok)
+      throw new Error("Gagal mengambil daftar post dari Strapi.");
+
     const jsonResponse = await response.json();
     if (!jsonResponse.data) return [];
 
@@ -131,18 +137,20 @@ export async function getStrapiPosts(categoryName?: string): Promise<Post[]> {
  */
 export async function getStrapiPostBySlug(slug: string) {
   logDebug(`Fetching post by slug: ${slug}`);
-  
+
   const postUrl = `${STRAPI_API_URL}/api/articles?filters[slug][$eq]=${slug}&populate=*`;
   const allPostsNavUrl = `${STRAPI_API_URL}/api/articles?sort[0]=publishedAt:desc&fields[0]=slug&fields[1]=title`;
 
   try {
     const [postResponse, allPostsNavResponse] = await Promise.all([
       fetch(postUrl, { next: { revalidate: 60 } }), // Cache post individu
-      fetch(allPostsNavUrl, { next: { revalidate: 60 } }) // Cache data navigasi
+      fetch(allPostsNavUrl, { next: { revalidate: 60 } }), // Cache data navigasi
     ]);
 
-    if (!postResponse.ok) throw new Error(`Gagal mengambil data post untuk slug: ${slug}`);
-    if (!allPostsNavResponse.ok) throw new Error("Gagal mengambil data navigasi post.");
+    if (!postResponse.ok)
+      throw new Error(`Gagal mengambil data post untuk slug: ${slug}`);
+    if (!allPostsNavResponse.ok)
+      throw new Error("Gagal mengambil data navigasi post.");
 
     const postJson = await postResponse.json();
     if (!postJson.data || postJson.data.length === 0) {
@@ -152,23 +160,73 @@ export async function getStrapiPostBySlug(slug: string) {
     // Gunakan transformStrapiData untuk konsistensi, tapi ambil gambar ukuran penuh
     const post = transformStrapiData(postJson.data[0]);
     if (postJson.data[0].cover?.url) {
-        post.metadata.image = `${STRAPI_API_URL}${postJson.data[0].cover.url}`;
+      post.metadata.image = `${STRAPI_API_URL}${postJson.data[0].cover.url}`;
     }
 
     // Logika untuk menemukan post sebelum dan sesudahnya
-    const allPostsNavData = (await allPostsNavResponse.json()).data as PostSummary[];
-    const currentIndex = allPostsNavData.findIndex(p => p.slug === slug);
+    const allPostsNavData = (await allPostsNavResponse.json())
+      .data as PostSummary[];
+    const currentIndex = allPostsNavData.findIndex((p) => p.slug === slug);
 
-    const nextPost = currentIndex > 0 ? allPostsNavData[currentIndex - 1] : null;
-    const prevPost = currentIndex < allPostsNavData.length - 1 ? allPostsNavData[currentIndex + 1] : null;
+    const nextPost =
+      currentIndex > 0 ? allPostsNavData[currentIndex - 1] : null;
+    const prevPost =
+      currentIndex < allPostsNavData.length - 1
+        ? allPostsNavData[currentIndex + 1]
+        : null;
 
     logDebug("Navigation found:", { prev: prevPost, next: nextPost });
 
     return { post, prevPost, nextPost };
-
   } catch (error) {
     console.error(`Error fetching post by slug (${slug}):`, error);
     return notFound();
+  }
+}
+
+export async function getStrapiRelatedPosts(
+  categoryName: string,
+  currentSlug: string
+): Promise<Post[]> {
+  // Jangan cari artikel terkait jika kategori adalah "General" atau tidak ada
+  if (!categoryName || categoryName === "General") {
+    logDebug("Skipping related posts search for General category.");
+    return [];
+  }
+
+  logDebug(
+    `Fetching related posts for category: ${categoryName}, excluding slug: ${currentSlug}`
+  );
+
+  // Buat URL dengan query parameter yang dinamis
+  const relatedPostsUrl = new URL(`${STRAPI_API_URL}/api/articles`);
+  relatedPostsUrl.searchParams.set("populate", "*");
+  relatedPostsUrl.searchParams.set("sort[0]", "publishedAt:desc");
+  relatedPostsUrl.searchParams.set("pagination[limit]", "3"); // Ambil 3 artikel terkait
+  relatedPostsUrl.searchParams.set(
+    "filters[category][name][$eq]",
+    categoryName
+  );
+  relatedPostsUrl.searchParams.set("filters[slug][$ne]", currentSlug); // Filter untuk mengecualikan post saat ini
+
+  try {
+    const response = await fetch(relatedPostsUrl.toString(), {
+      next: { revalidate: 3600 },
+    }); // Cache 1 jam
+    if (!response.ok) {
+      throw new Error(
+        `Gagal mengambil artikel terkait untuk kategori: ${categoryName}`
+      );
+    }
+
+    const jsonResponse = await response.json();
+    if (!jsonResponse.data) return [];
+
+    // Gunakan transformStrapiData yang sudah ada untuk konsistensi
+    return jsonResponse.data.map(transformStrapiData);
+  } catch (error) {
+    console.error("Error fetching related posts:", error);
+    return [];
   }
 }
 

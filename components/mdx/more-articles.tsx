@@ -1,6 +1,8 @@
+// components/more-articles.tsx
+
 import Link from "next/link";
 import Image from "next/image";
-import { Post, formatDate } from "@/utils/strapi";
+import { Post, formatDate } from "@/hooks/strapi";
 
 interface MoreArticlesProps {
   posts: Post[];
@@ -14,7 +16,7 @@ export default function MoreArticles({ posts }: MoreArticlesProps) {
   return (
     <div className="mt-16 pt-12 border-t border-gray-200">
       <h2 className="text-3xl font-bold mb-8 text-center md:text-left">
-        More Articles
+        Artikel Lainnya
       </h2>
 
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -58,7 +60,7 @@ export default function MoreArticles({ posts }: MoreArticlesProps) {
 
                 <div className="mt-4">
                   <span className="inline-block bg-gray-900 text-white text-sm font-semibold py-2 px-4 rounded-md group-hover:bg-slate-700 transition-colors">
-                    Read More
+                    Selengkapnya
                   </span>
                 </div>
               </div>

@@ -1,8 +1,8 @@
 // components/BlogList.tsx
 import Link from "next/link";
 import Image from "next/image";
-import { formatDate } from "@/utils/strapi";
-import type { Post, Category } from "@/utils/strapi";
+import { formatDate } from "@/hooks/strapi";
+import type { Post, Category } from "@/hooks/strapi";
 
 interface BlogListProps {
   posts: Post[];
@@ -13,7 +13,6 @@ interface BlogListProps {
 export default function BlogList({ posts, categories, selectedCategory }: BlogListProps) {
   return (
     <>
-      {/* Tombol Kategori (Tidak berubah) */}
       <div className="flex flex-wrap gap-2 mb-10">
         {categories.map((category) => (
           <Link
@@ -30,14 +29,12 @@ export default function BlogList({ posts, categories, selectedCategory }: BlogLi
         ))}
       </div>
 
-      {/* Daftar Artikel - Diubah menjadi Grid of Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {posts.map((post) => (
           <article 
             key={post.slug} 
             className="bg-custom-darkgreen rounded-2xl shadow-lg overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-1"
           >
-            {/* Bagian Gambar */}
             {post.metadata.image && (
               <Link href={`/blog/${post.slug}`} className="block">
                 <Image
@@ -45,22 +42,23 @@ export default function BlogList({ posts, categories, selectedCategory }: BlogLi
                   alt={`Preview for ${post.metadata.title}`}
                   width={400}
                   height={225}
-                  className="w-full h-48 object-cover" // Tinggi gambar tetap
+                  className="w-full h-48 object-cover"
                 />
               </Link>
             )}
 
-            {/* Bagian Konten */}
             <div className="p-6 flex flex-col flex-grow">
               <header className="flex-grow mb-4">
-                <h2 className="text-2xl font-bold text-white">
+                <h2 className="text-2xl font-bold text-white mb-2">
                   <Link className="hover:underline" href={`/blog/${post.slug}`}>
                     {post.metadata.title}
                   </Link>
                 </h2>
+                <time dateTime={post.metadata.publishedAt} className="text-sm text-gray-400">
+                  {formatDate(post.metadata.publishedAt)}
+                </time>
               </header>
               
-              {/* Tombol "Read more" */}
               <footer>
                 <Link 
                   href={`/blog/${post.slug}`} 
@@ -74,7 +72,6 @@ export default function BlogList({ posts, categories, selectedCategory }: BlogLi
         ))}
       </div>
 
-      {/* Pesan jika tidak ada post */}
       {posts.length === 0 && (
         <div className="text-center py-8">
           <div className="text-gray-500">
