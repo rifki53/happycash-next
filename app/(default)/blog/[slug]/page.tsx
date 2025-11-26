@@ -29,6 +29,7 @@ interface PostPageProps {
   }>;
 }
 
+// --- UPDATED METADATA FUNCTION ---
 export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
@@ -40,13 +41,57 @@ export async function generateMetadata({
   }
 
   const { post } = data;
+  // Ensure this URL matches your actual domain
   const postUrl = `https://www.adapundi.com/blog/${post.slug}`;
+
+  // 1. Base keywords from your CSV (Blog section)
+  const baseKeywords = [
+    "financial tips",
+    "loan guide",
+    "money management",
+    "Happycash Blog",
+  ];
+
+  // 2. Combine with dynamic data (Category & Brand)
+  const keywords = [
+    post.metadata.category, // e.g., "Financial Literacy"
+    "Happycash",
+    ...baseKeywords,
+  ];
 
   return {
     title: post.metadata.title,
     description: post.metadata.description,
+    keywords: keywords,
     alternates: {
       canonical: postUrl,
+    },
+    // 3. OpenGraph for Social Media (Facebook, LinkedIn, etc.)
+    openGraph: {
+      title: post.metadata.title,
+      description: post.metadata.description,
+      type: "article",
+      url: postUrl,
+      siteName: "Happycash",
+      publishedTime: post.metadata.publishedAt,
+      authors: [post.metadata.author],
+      images: post.metadata.image
+        ? [
+            {
+              url: post.metadata.image,
+              width: 1200, // Standard OG width
+              height: 630, // Standard OG height
+              alt: post.metadata.title,
+            },
+          ]
+        : [],
+    },
+    // 4. Twitter Card
+    twitter: {
+      card: "summary_large_image",
+      title: post.metadata.title,
+      description: post.metadata.description,
+      images: post.metadata.image ? [post.metadata.image] : [],
     },
   };
 }

@@ -1,3 +1,4 @@
+// app/(default)/page.tsx
 import AccountSecuritySection from "@/components/home/account-security-section";
 import Features from "@/components/home/features";
 import GovernmentPartners from "@/components/home/government-partners";
@@ -7,10 +8,10 @@ import StepByStep from "@/components/home/step-by-step";
 import Testimonials from "@/components/home/testimonial";
 import TestimonialsSection from "@/components/home/testimonials/testimonials-section";
 
-export const metadata = {
-  title: "Home - Simple",
-  description: "Page description",
-};
+// Import helper
+import { getMetadata } from "@/lib/site-metadata";
+
+export const metadata = getMetadata("home");
 
 export default function Home() {
   return (

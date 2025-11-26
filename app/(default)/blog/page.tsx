@@ -1,8 +1,10 @@
 import { getStrapiPosts, getStrapiCategories } from "@/hooks/strapi";
 import type { Category } from "@/hooks/strapi";
-
 import BlogList from "@/components/mdx/blog-list";
 import HeroBlog from "@/components/mdx/hero-blog";
+import { getMetadata } from "@/lib/site-metadata"; // Import Helper
+
+export const metadata = getMetadata("blog");
 
 interface BlogPageProps {
   searchParams: {
