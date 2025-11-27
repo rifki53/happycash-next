@@ -15,8 +15,7 @@ const testimonials = [
     content:
       "“Napakababa ng interest na ibinibigay ni happycash. Bukod sa maliit ang interest ang gaaan pa ng hulog sa bayaran”",
     videoThumb: catherineImage, // Menggunakan gambar utama sebagai thumbnail video
-    videoUrl:
-      "https://assets.Happycash.com/Happycash/media/0920+60sec-App-landscape.mp4",
+    videoUrl: "https://pub.happycash.ph/video/HC-CATHERINE-15SEC-1.3.mp4",
   },
   {
     img: juvyImage,
@@ -25,8 +24,7 @@ const testimonials = [
     content:
       "“Ang kinaganda nun, kumbaga on the spot makukuha mo siya kaagad.”",
     videoThumb: juvyImage,
-    videoUrl:
-      "https://assets.Happycash.com/Happycash/media/0920+60sec-App-landscape.mp4",
+    videoUrl: "https://pub.happycash.ph/video/HC-JUVY-15SEC-1.3.mp4",
   },
   {
     img: mariaImage,
@@ -35,8 +33,7 @@ const testimonials = [
     content:
       "“From the word itself HappyCash kasi nakaka happy din naman ung option”",
     videoThumb: mariaImage,
-    videoUrl:
-      "https://assets.Happycash.com/Happycash/media/0920+60sec-App-landscape.mp4",
+    videoUrl: "https://pub.happycash.ph/video/HC-MARIA-30SEC-1.3.mp4",
   },
 ];
 
