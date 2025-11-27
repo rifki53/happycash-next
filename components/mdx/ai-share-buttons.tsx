@@ -21,7 +21,7 @@ interface AiShareButtonsProps {
 
 export default function AiShareButtons({ title, slug }: AiShareButtonsProps) {
   const [copied, setCopied] = useState(false);
-  const articleUrl = `https://www.adapundi.com/blog/${slug}`;
+  const articleUrl = `https://www.happycash.ph/blog/${slug}`;
   const encodedUrl = encodeURIComponent(articleUrl);
   const encodedTitle = encodeURIComponent(title);
 

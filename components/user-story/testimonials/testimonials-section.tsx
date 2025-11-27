@@ -18,7 +18,7 @@ const testimonials = [
     content:
       "Napakababa ng interest na ibinibigay ni happycash. Bukod sa maliit ang interest ang gaaan pa ng hulog sa bayaran.",
     videoUrl:
-      "https://assets.adapundi.com/adapundi/media/0920+60sec-App-landscape.mp4",
+      "https://assets.Happycash.com/Happycash/media/0920+60sec-App-landscape.mp4",
   },
   {
     img: juvyImage,
@@ -27,7 +27,7 @@ const testimonials = [
     stars: 5,
     content: "Ang kinaganda nun, kumbaga on the spot makukuha mo siya kaagad.",
     videoUrl:
-      "https://assets.adapundi.com/adapundi/media/0920+60sec-App-landscape.mp4",
+      "https://assets.Happycash.com/Happycash/media/0920+60sec-App-landscape.mp4",
   },
   {
     img: mariaImage,
@@ -36,7 +36,7 @@ const testimonials = [
     stars: 5,
     content: "Ang kinaganda nun, kumbaga on the spot makukuha mo siya kaagad.",
     videoUrl:
-      "https://assets.adapundi.com/adapundi/media/0920+60sec-App-landscape.mp4",
+      "https://assets.Happycash.com/Happycash/media/0920+60sec-App-landscape.mp4",
   },
 ];
 

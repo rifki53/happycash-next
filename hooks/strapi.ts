@@ -75,7 +75,7 @@ function transformStrapiData(item: any): Post {
       description: item.description || "",
       publishedAt: item.publishedAt,
       updatedAt: item.updatedAt,
-      author: item.author?.name || "Adapundi Team",
+      author: item.author?.name || "Happycash Team",
       category: item.category?.name || "General",
       image: imageUrl,
       readingTime: calculateReadingTime(item.blocks),

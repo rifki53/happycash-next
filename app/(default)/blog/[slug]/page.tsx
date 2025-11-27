@@ -42,7 +42,7 @@ export async function generateMetadata({
 
   const { post } = data;
   // Ensure this URL matches your actual domain
-  const postUrl = `https://www.adapundi.com/blog/${post.slug}`;
+  const postUrl = `https://www.happycash.ph/blog/${post.slug}`;
 
   // 1. Base keywords from your CSV (Blog section)
   const baseKeywords = [
