@@ -50,7 +50,7 @@ export default function SecurityTips() {
         <div className="text-center pb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white">
             To protect your funds and personal information,{' '}
-            <span className="text-yellow-400">please follow these important tips</span>
+            <span className="text-custom-yellow">please follow these important tips</span>
           </h2>
         </div>
 

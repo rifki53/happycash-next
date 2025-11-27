@@ -9,7 +9,7 @@ export default function HeroBlog() {
           <div className="text-center md:text-left order-last md:order-first">
             <h1 className="mb-4 text-4xl font-extrabold leading-tight tracking-tighter text-white md:text-5xl">
               <span className="text-custom-yellow">
-                Latest News & Activities
+                Latest News <br /> & Activities
               </span>
             </h1>
           </div>

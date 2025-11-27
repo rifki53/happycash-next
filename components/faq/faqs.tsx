@@ -110,7 +110,7 @@ export default function Faqs() {
 
   return (
     <section className="bg-gray-100">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:pt-2 pt-22 md:py-20">
         {/* Tab Navigation - Aligned Left */}
         <div className="mb-8">
           <div className="inline-flex bg-white rounded-xl items-center shadow-md w-full">
