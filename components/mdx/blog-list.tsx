@@ -62,7 +62,7 @@ export default function BlogList({ posts, categories, selectedCategory }: BlogLi
               <footer>
                 <Link 
                   href={`/blog/${post.slug}`} 
-                  className="inline-block bg-lime-300 hover:bg-lime-400 text-gray-900 font-bold py-2 px-5 rounded-lg transition-colors"
+                  className="inline-block bg-custom-yellow hover:bg-custom-yellow text-gray-900 font-bold py-2 px-5 rounded-lg transition-colors"
                 >
                   Read more
                 </Link>

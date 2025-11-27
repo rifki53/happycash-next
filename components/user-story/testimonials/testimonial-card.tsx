@@ -25,7 +25,7 @@ const StarRating = ({ count }: { count: number }) => (
     {Array(count)
       .fill(0)
       .map((_, i) => (
-        <FaStar key={i} className="text-lime-500" />
+        <FaStar key={i} className="text-custom-yellow" />
       ))}
   </div>
 );

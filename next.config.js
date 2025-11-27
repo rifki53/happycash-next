@@ -3,7 +3,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "cms.adapundi.com",
+        hostname: "cms.happycash.ph",
         port: "",
         pathname: "/uploads/**", // Izinkan semua path di dalam /uploads
       },

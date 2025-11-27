@@ -106,8 +106,8 @@ export default function StepByStep() {
                         aria-label={`Step ${step}`}
                         className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium z-10 transition-all duration-200 ${
                           stepActive >= step
-                            ? 'bg-lime-500 text-white' // Warna aktif
-                            : 'border-2 border-lime-300 text-lime-500' // Warna tidak aktif
+                            ? 'bg-custom-yellow text-white' // Warna aktif
+                            : 'border-2 border-custom-yellow text-custom-yellow' // Warna tidak aktif
                         }`}
                       >
                         {step}
@@ -118,7 +118,7 @@ export default function StepByStep() {
                     {step !== 5 && (
                       <div
                         className={`absolute top-10 h-full left-1/2 w-0.5 -translate-x-1/2 transition-colors duration-200 ${
-                          stepActive > step ? 'bg-lime-500' : 'bg-lime-300'
+                          stepActive > step ? 'bg-custom-yellow' : 'bg-custom-yellow'
                         }`}
                       ></div>
                     )}

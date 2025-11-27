@@ -40,7 +40,7 @@ export default function Features() {
           <h2 className="text-3xl md:text-4xl font-extrabold text-custom-yellow">
             Your Trusted Partner for Easy,
             <br />
-            <span className="text-lime-400">Transparent Loans</span>
+            <span className="text-custom-yellow">Transparent Loans</span>
           </h2>
         </div>
 
@@ -59,7 +59,7 @@ export default function Features() {
                 />
               </div>
               {/* Judul Fitur */}
-              <h3 className="text-xl font-bold text-lime-400 mb-2 text-custom-yellow">
+              <h3 className="text-xl font-bold text-custom-yellow mb-2 text-custom-yellow">
                 {feature.title}
               </h3>
               {/* Deskripsi Fitur */}

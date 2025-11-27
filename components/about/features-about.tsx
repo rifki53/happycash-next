@@ -29,7 +29,7 @@ export default function FeatureAbout() {
               <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
                 Served Over
                 <br />
-                <span className="text-lime-400 font-extrabold text-4xl md:text-5xl">1,600,000</span>
+                <span className="text-custom-yellow font-extrabold text-4xl md:text-5xl">1,600,000</span>
                 <br />
                 Filipinos
               </h2>

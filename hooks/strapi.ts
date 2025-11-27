@@ -1,10 +1,11 @@
+// https://cms.happycash.ph/admin/auth/login
 // hooks/strapi.ts
 
 import { notFound } from "next/navigation";
 
 // --- Konstanta & Tipe Data ---
 const STRAPI_API_URL =
-  process.env.NEXT_PUBLIC_STRAPI_API_URL || "https://cms.adapundi.com";
+  process.env.NEXT_PUBLIC_STRAPI_API_URL || "https://cms.happycash.ph";
 const DEBUG = process.env.NODE_ENV === "development";
 
 // --- Tipe Data ---

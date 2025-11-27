@@ -23,7 +23,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="#0" // Ganti dengan link Facebook Anda
-                      className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-slate-900 transition hover:bg-lime-400"
+                      className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-slate-900 transition hover:bg-custom-yellow"
                       aria-label="Facebook"
                     >
                       <FaFacebookF size={20} />
@@ -32,7 +32,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="#0" // Ganti dengan link Instagram Anda
-                      className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-slate-900 transition hover:bg-lime-400"
+                      className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-slate-900 transition hover:bg-custom-yellow"
                       aria-label="Instagram"
                     >
                       <FaInstagram size={20} />
@@ -41,7 +41,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="#0" // Ganti dengan link Youtube Anda
-                      className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-slate-900 transition hover:bg-lime-400"
+                      className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-slate-900 transition hover:bg-custom-yellow"
                       aria-label="YouTube"
                     >
                       <FaYoutube size={20} />
@@ -55,28 +55,28 @@ export default function Footer() {
             <div className="md:col-span-1">
               <div className="grid grid-cols-2 gap-8 text-sm sm:grid-cols-3">
                 <div>
-                  <h3 className="mb-2 font-semibold text-lime-400">Hotline</h3>
+                  <h3 className="mb-2 font-semibold text-custom-yellow">Hotline</h3>
                   <ul className="space-y-1 text-slate-200">
                     <li><a href="tel:+639102626060" className="transition hover:text-white">(+63)9102626060</a></li>
                     <li><a href="tel:+639085848852" className="transition hover:text-white">(+63)9085848852</a></li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="mb-2 font-semibold text-lime-400">Customer Service</h3>
+                  <h3 className="mb-2 font-semibold text-custom-yellow">Customer Service</h3>
                   <a href="mailto:cs@happycash.ph" className="text-slate-200 transition hover:text-white">cs@happycash.ph</a>
                 </div>
                 <div>
-                  <h3 className="mb-2 font-semibold text-lime-400">Join us</h3>
+                  <h3 className="mb-2 font-semibold text-custom-yellow">Join us</h3>
                   <a href="mailto:job@happycash.ph" className="text-slate-200 transition hover:text-white">job@happycash.ph</a>
                 </div>
               </div>
               <div className="mt-8 grid grid-cols-2 gap-8 text-sm sm:grid-cols-3">
                 <div>
-                  <h3 className="mb-2 font-semibold text-lime-400">Office Hours:</h3>
+                  <h3 className="mb-2 font-semibold text-custom-yellow">Office Hours:</h3>
                   <p className="text-slate-200">Monday-Sunday:<br />9:00-18:00</p>
                 </div>
                 <div className="sm:col-span-2">
-                  <h3 className="mb-2 font-semibold text-lime-400">Address</h3>
+                  <h3 className="mb-2 font-semibold text-custom-yellow">Address</h3>
                   <p className="text-slate-200">
                     26th Floor, The World Center, Gil Puyat Ave., Brgy. Bel-Air,
                     Makati City, Philippines
@@ -90,7 +90,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 gap-8 pt-8 mt-8 md:grid-cols-2">
             {/* About Text */}
             <div className="text-sm text-slate-200">
-              <p className="mb-4 font-semibold text-lime-400">
+              <p className="mb-4 font-semibold text-custom-yellow">
                 Want to help accelerate financial inclusion in the Philippines?
               </p>
               <p>
@@ -100,15 +100,15 @@ export default function Footer() {
                 operated by Yinshan Lending Inc., a licensed financing company
                 with SEC Registration No. CS201900108 and Certificate of
                 Authority No. 2860. Please always study the{" "}
-                <Link href="/terms" className="underline hover:text-lime-400">
+                <Link href="/terms" className="underline hover:text-custom-yellow">
                   terms and conditions
                 </Link>
                 ,{" "}
-                <Link href="/disclosure" className="underline hover:text-lime-400">
+                <Link href="/disclosure" className="underline hover:text-custom-yellow">
                   disclosure statement
                 </Link>
                 , and{" "}
-                <Link href="/privacy" className="underline hover:text-lime-400">
+                <Link href="/privacy" className="underline hover:text-custom-yellow">
                   privacy agreement
                 </Link>{" "}
                 before proceeding with any transaction.

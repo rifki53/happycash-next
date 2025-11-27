@@ -201,7 +201,7 @@ export default function Testimonials() {
                         <div className="font-bold text-slate-800">
                           {testimonial.name}
                         </div>
-                        <div className="mt-1 flex items-center text-lime-400">
+                        <div className="mt-1 flex items-center text-custom-yellow">
                           {Array.from({ length: testimonial.rating }).map(
                             (_, i) => (
                               <FaStar key={i} />
@@ -236,8 +236,8 @@ export default function Testimonials() {
         }
 
         .testimonial-pagination .swiper-pagination-bullet-active {
-          background-color: #a3e635;
-          border-color: #a3e635;
+          background-color: #d6f837;
+          border-color: #d6f837;
         }
 
         .swiper-button-disabled {

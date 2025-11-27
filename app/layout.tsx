@@ -13,7 +13,6 @@ const inter = Inter({
   display: "swap",
 });
 
-// Menggunakan helper untuk set default metadata (menggunakan data 'home')
 export const metadata = getMetadata("home");
 
 export default function RootLayout({
