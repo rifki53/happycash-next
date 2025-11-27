@@ -45,7 +45,7 @@ const AccountSecuritySection = () => {
               privacy.
             </p>
             <div className="mt-2">
-              <button className="bg-gray-800 text-white font-bold py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">
+              <button className="bg-gray-800 text-custom-yellow font-bold py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">
                 Safety Tips
               </button>
             </div>
