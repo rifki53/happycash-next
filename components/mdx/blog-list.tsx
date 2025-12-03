@@ -10,15 +10,23 @@ interface BlogListProps {
   selectedCategory: string;
 }
 
-export default function BlogList({ posts, categories, selectedCategory }: BlogListProps) {
+export default function BlogList({
+  posts,
+  categories,
+  selectedCategory,
+}: BlogListProps) {
   return (
     <>
       <div className="flex flex-wrap gap-2 mb-10">
         {categories.map((category) => (
           <Link
             key={category.id}
-            href={category.name === "All" ? "/blog" : `/blog?category=${category.name}`}
-            className={`btn-sm font-normal shadow-sm ${
+            href={
+              category.name === "All"
+                ? "/blog"
+                : `/blog?category=${category.name}`
+            }
+            className={`btn-sm font-normal text-lg shadow-sm ${
               selectedCategory === category.name
                 ? "text-gray-200 bg-gray-800 hover:bg-gray-900 pointer-events-none"
                 : "text-gray-800 bg-white hover:bg-gray-50"
@@ -31,8 +39,8 @@ export default function BlogList({ posts, categories, selectedCategory }: BlogLi
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {posts.map((post) => (
-          <article 
-            key={post.slug} 
+          <article
+            key={post.slug}
             className="bg-custom-darkgreen rounded-2xl shadow-lg overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-1"
           >
             {post.metadata.image && (
@@ -54,14 +62,17 @@ export default function BlogList({ posts, categories, selectedCategory }: BlogLi
                     {post.metadata.title}
                   </Link>
                 </h2>
-                <time dateTime={post.metadata.publishedAt} className="text-sm text-gray-400">
+                <time
+                  dateTime={post.metadata.publishedAt}
+                  className="text-sm text-gray-400"
+                >
                   {formatDate(post.metadata.publishedAt)}
                 </time>
               </header>
-              
+
               <footer>
-                <Link 
-                  href={`/blog/${post.slug}`} 
+                <Link
+                  href={`/blog/${post.slug}`}
                   className="inline-block bg-custom-yellow hover:bg-custom-yellow text-gray-900 font-bold py-2 px-5 rounded-lg transition-colors"
                 >
                   Read more
@@ -75,7 +86,7 @@ export default function BlogList({ posts, categories, selectedCategory }: BlogLi
       {posts.length === 0 && (
         <div className="text-center py-8">
           <div className="text-gray-500">
-            Tidak ada post yang ditemukan di kategori ini.
+            No posts were found in this category.
           </div>
         </div>
       )}

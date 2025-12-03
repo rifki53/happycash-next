@@ -26,7 +26,7 @@ export default function GetApp() {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="grid items-center gap-12 py-12 md:grid-cols-2 md:py-20">
+        <div className="grid items-center gap-12 py-12 mt-18 md:grid-cols-2 md:py-20">
           <div className="text-center md:text-left">
             <h2 className="mb-4 text-4xl font-extrabold text-gray-900">
               Trusted Financial Services
