@@ -23,20 +23,20 @@ export default function Faqs() {
   // State to manage the active tab, explicitly typed
   const [activeTab, setActiveTab] = useState<string>("loan");
 
-  // FAQ data organized by tab - UPDATED
+  // FAQ data organized by tab
   const faqData: FaqData = {
     loan: [
       {
         question: "How do I apply for a loan?",
         answer:
-          "Simply download the HappyCash app, sign-up using your mobile number, complete your profile with the required personal information and contacts information (for verification and repayment); and click apply!",
-        active: true, // This one will be open by default
+          "Simply download the Happycash app, sign-up using your mobile number, complete your profile with the required personal information and contact information (for verification and repayment); and click apply!",
+        active: true,
       },
       {
         question:
           "What is the nominal loan that can be submitted and how long is the loan term?",
         answer:
-          "The nominal loan that can be submitted is up to PHP25000.00 for a period of 90 days.",
+          "The maximum loan amount available is up to PHP 25,000.00 with a term of up to 180 days.",
       },
       {
         question: "What documents do I need to submit for this Happycash Loan?",
@@ -46,7 +46,7 @@ export default function Faqs() {
       {
         question: "Why is my loan application not approved?",
         answer:
-          "As much as we’d love to cater to everyone, our loan decisions are based on HappyCash’s credit and underwriting model, which considers many factors in your loan application.",
+          "As much as we’d love to cater to everyone, our loan decisions are based on Happycash’s credit and underwriting model, which considers many factors in your loan application.",
       },
       {
         question: "How do I receive my loan?",
@@ -56,14 +56,14 @@ export default function Faqs() {
       {
         question: "Can I apply again if I was rejected?",
         answer:
-          "Yes, you can apply again! Check your HappyCash app's homepage to see when you become eligible to reapply!",
+          "Yes, you can apply again! Check your Happycash app's homepage to see when you become eligible to reapply!",
       },
     ],
     repayment: [
       {
         question: "How do I make a payment?",
         answer:
-          "To do this, please log in to the HappyCash app and follow the instructions. You can repay your loan via 7Eleven, GCash, Paymaya, Cebuana Lhuillier many more!",
+          "To do this, please log in to the Happycash app and follow the instructions. You can repay your loan via 7Eleven, GCash, Paymaya, Cebuana Lhuillier many more!",
       },
       {
         question:
@@ -74,7 +74,7 @@ export default function Faqs() {
       {
         question: "Will I receive payment reminders?",
         answer:
-          "We will send a message and will contact you by phone as the due date approaches, reminding you to make payment on or before the due date.",
+          "We will send a message and contact you by phone as the due date approaches, reminding you to make payment on or before the due date.",
       },
       {
         question:
@@ -87,7 +87,7 @@ export default function Faqs() {
       {
         question: "What is Happycash?",
         answer:
-          "HappyCash is an online lending platform under Yinshan Lending Inc. (SEC# CS201900108), offering QuickLoan for your urgent financial needs. Always verify our SEC registration for your safety Ka-Hapi!",
+          "Happycash is an online lending platform under Yinshan Lending Inc. (SEC# CS201900108), offering QuickLoan for your urgent financial needs. Always verify our SEC registration for your safety Ka-Hapi!",
       },
       {
         question: "Is my personal information safe with you?",
@@ -97,7 +97,7 @@ export default function Faqs() {
       {
         question: "How do I check my loan billing history?",
         answer:
-          "You can view your billing history anytime! Click 'Bill' to see consolidated loan details, or tap 'Repay' if you have outstanding balances to settle - all available in your HappyCash app for easy tracking.",
+          "You can view your billing history anytime! Click 'Bill' to see consolidated loan details, or tap 'Repay' if you have outstanding balances to settle - all available in your Happycash app for easy tracking.",
       },
     ],
   };

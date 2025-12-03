@@ -39,7 +39,7 @@ export default function GetApp() {
               <div className="rounded-3xl shadow-2xl border-3 border-gray-400 overflow-hidden max-w-[400px]">
                 <Image
                   src={single}
-                  alt="HappyCash App Interface"
+                  alt="Happycash App Interface"
                   width={400}
                   height={400}
                   className="h-auto w-full"
@@ -76,7 +76,7 @@ export default function GetApp() {
             <div className="rounded-3xl shadow-2xl border-3 border-gray-400 overflow-hidden">
               <Image
                 src={single}
-                alt="HappyCash App Interface"
+                alt="Happycash App Interface"
                 width={400}
                 height={400}
                 className="h-auto w-full"

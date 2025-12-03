@@ -31,7 +31,7 @@ const testimonials = [
     name: "Maria",
     date: "",
     content:
-      "“From the word itself HappyCash kasi nakaka happy din naman ung option”",
+      "“From the word itself Happycash kasi nakaka happy din naman ung option”",
     videoThumb: mariaImage,
     videoUrl: "https://pub.happycash.ph/video/HC-MARIA-30SEC-1.3.mp4",
   },

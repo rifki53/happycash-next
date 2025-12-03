@@ -36,7 +36,7 @@ export default function StaySecure() {
           <div className="relative">
             <Image
               src="/images/security/real@2x.png"
-              alt="Real HappyCash social media accounts"
+              alt="Real Happycash social media accounts"
               width={540}
               height={960}
               className="rounded-4xl rounded-tl-none shadow-lg"

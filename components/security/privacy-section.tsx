@@ -11,10 +11,19 @@ const PrivacySection = () => {
 
           {/* Paragraph Text */}
           <p className="text-lg text-gray-600 mb-8">
-            In compliance with the Data Privacy Act of 2012 (Republic Act No.
-            10173), as well as guidelines set forth by the Securities and Ep
-            xchange Commission (SEC) and the National Privacy Commission (NPC),
-            we are committed to protecting your personal information and
+            In compliance with the{" "}
+            <span className="font-bold text-gray-900">
+              Data Privacy Act of 2012 (Republic Act No. 10173)
+            </span>
+            , as well as guidelines set forth by the{" "}
+            <span className="font-bold text-gray-900">
+              Securities and Exchange Commission (SEC)
+            </span>{" "}
+            and the{" "}
+            <span className="font-bold text-gray-900">
+              National Privacy Commission (NPC)
+            </span>
+            , we are committed to protecting your personal information and
             financial security. Your trust is of utmost importance to us, and we
             implement robust security measures to safeguard your data in
             accordance with the highest standards of confidentiality and

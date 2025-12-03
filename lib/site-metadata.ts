@@ -123,7 +123,7 @@ export function getMetadata(page: PageKey): Metadata {
 
     // --- IMPLEMENTASI MICROSOFT TILES ---
     other: {
-      'application-name': 'HappyCash',
+      'application-name': 'Happycash',
       'msapplication-TileColor': '#FFFFFF',
       'msapplication-TileImage': '/mstile-144x144.png',
       'msapplication-square70x70logo': '/mstile-70x70.png',

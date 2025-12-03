@@ -1,39 +1,45 @@
 "use client"; // Komponen ini interaktif, jadi harus menjadi Client Component
 
-import { useState, useEffect } from 'react';
-import Image, { StaticImageData } from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from "react";
+import Image, { StaticImageData } from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 import { PiStarFourFill } from "react-icons/pi"; // Impor ikon bintang
 
 // Impor gambar-gambar untuk setiap langkah
-import app1 from '@/public/images/app/1@2x.png';
-import app2 from '@/public/images/app/2@2x.png';
-import app3 from '@/public/images/app/3@2x.png';
-import app4 from '@/public/images/app/4@2x.png';
-import app5 from '@/public/images/app/5@2x.png';
+import app1 from "@/public/images/app/1@2x.png";
+import app2 from "@/public/images/app/2@2x.png";
+import app3 from "@/public/images/app/3@2x.png";
+import app4 from "@/public/images/app/4@2x.png";
+import app5 from "@/public/images/app/5@2x.png";
 
 // Definisikan data untuk gambar dan teks
-const images: { [key: number]: StaticImageData } = { 1: app1, 2: app2, 3: app3, 4: app4, 5: app5 };
-const alts: { [key: number]: string } = { 
-  1: 'Download and Register', 
-  2: 'Fill in the information', 
-  3: 'Upload 1 valid ID', 
-  4: 'Complete Face Recognition', 
-  5: 'Apply and wait for review' 
+const images: { [key: number]: StaticImageData } = {
+  1: app1,
+  2: app2,
+  3: app3,
+  4: app4,
+  5: app5,
+};
+const alts: { [key: number]: string } = {
+  1: "Download and Register",
+  2: "Fill in the information",
+  3: "Upload 1 valid ID",
+  4: "Complete Face Recognition",
+  5: "Apply and wait for review",
 };
 const stepTitles = [
-  'Download and Register',
-  'Fill in the information',
-  'Upload 1 valid ID',
-  'Complete Face Recognition',
-  'Apply and wait for review',
+  "Download and Register",
+  "Fill in the information",
+  "Upload 1 valid ID",
+  "Complete Face Recognition",
+  "Apply and wait for review",
 ];
 const stepDescriptions = [
-  'Download the Happycash application on Google Play and the App Store.',
-  'Fill in your personal data, then follow the instructions in the application.',
-  'Use one clear, government-issued ID to verify your identity.',
-  'Make sure your face is clear and well-lit before scanning.',
-  'Within minutes the funds are disbursed after your application is approved.',
+  "Download the Happycash application on Google Play or the App Store.",
+  "Fill in your personal data, then follow the instructions in the application.",
+  "Use one clear, government-issued ID to verify your identity.",
+  "Make sure your face is clear and well-lit before scanning.",
+  "Within a few minutes, the funds would be disbursed after your application is approved.",
 ];
 
 export default function StepByStep() {
@@ -66,7 +72,6 @@ export default function StepByStep() {
 
           {/* Kontainer Utama */}
           <div className="flex flex-col md:flex-row justify-center md:space-x-8 items-center">
-            
             {/* Kontainer Gambar dengan Animasi */}
             <div className="md:w-1/2 w-full">
               <div className="relative min-h-[450px] h-full">
@@ -106,8 +111,8 @@ export default function StepByStep() {
                         aria-label={`Step ${step}`}
                         className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium z-10 transition-all duration-200 ${
                           stepActive >= step
-                            ? 'bg-custom-yellow text-gray-900' // Warna aktif
-                            : 'border-2 border-custom-yellow text-gray-900' // Warna tidak aktif
+                            ? "bg-custom-yellow text-gray-900" // Warna aktif
+                            : "border-2 border-custom-yellow text-gray-900" // Warna tidak aktif
                         }`}
                       >
                         {step}
@@ -118,14 +123,20 @@ export default function StepByStep() {
                     {step !== 5 && (
                       <div
                         className={`absolute top-10 h-full left-1/2 w-0.5 -translate-x-1/2 transition-colors duration-200 ${
-                          stepActive > step ? 'bg-custom-yellow' : 'bg-custom-yellow'
+                          stepActive > step
+                            ? "bg-custom-yellow"
+                            : "bg-custom-yellow"
                         }`}
                       ></div>
                     )}
                   </div>
                   <div className="w-5/6 pl-4">
-                    <h4 className="text-2xl font-bold mb-2">{stepTitles[step - 1]}</h4>
-                    <p className="text-gray-600">{stepDescriptions[step - 1]}</p>
+                    <h4 className="text-2xl font-bold mb-2">
+                      {stepTitles[step - 1]}
+                    </h4>
+                    <p className="text-gray-600">
+                      {stepDescriptions[step - 1]}
+                    </p>
                   </div>
                 </div>
               ))}
