@@ -55,29 +55,74 @@ export default function Footer() {
             <div className="md:col-span-1">
               <div className="grid grid-cols-2 gap-8 text-sm sm:grid-cols-3">
                 <div>
-                  <h3 className="mb-2 font-semibold text-custom-yellow">Hotline</h3>
+                  <h3 className="mb-2 font-semibold text-custom-yellow">
+                    Hotline
+                  </h3>
                   <ul className="space-y-1 text-slate-200">
-                    <li><a href="tel:+63277770111" className="transition hover:text-white">(+63)277770111</a></li>
-                    <li><a href="tel:+639102626060" className="transition hover:text-white">(+63)9102626060</a></li>
-                    <li><a href="tel:+639085848852" className="transition hover:text-white">(+63)9085848852</a></li>
+                    <li>
+                      <a
+                        href="tel:+63277770111"
+                        className="transition hover:text-white"
+                      >
+                        (+63)277770111
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="tel:+639102626060"
+                        className="transition hover:text-white"
+                      >
+                        (+63)9102626060
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="tel:+639085848852"
+                        className="transition hover:text-white"
+                      >
+                        (+63)9085848852
+                      </a>
+                    </li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="mb-2 font-semibold text-custom-yellow">Customer Service</h3>
-                  <a href="mailto:cs@happycash.ph" className="text-slate-200 transition hover:text-white">cs@happycash.ph</a>
+                  <h3 className="mb-2 font-semibold text-custom-yellow">
+                    Customer Service
+                  </h3>
+                  <a
+                    href="mailto:cs@happycash.ph"
+                    className="text-slate-200 transition hover:text-white"
+                  >
+                    cs@happycash.ph
+                  </a>
                 </div>
                 <div>
-                  <h3 className="mb-2 font-semibold text-custom-yellow">Join us</h3>
-                  <a href="mailto:job@happycash.ph" className="text-slate-200 transition hover:text-white">job@happycash.ph</a>
+                  <h3 className="mb-2 font-semibold text-custom-yellow">
+                    Join us
+                  </h3>
+                  <a
+                    href="mailto:job@happycash.ph"
+                    className="text-slate-200 transition hover:text-white"
+                  >
+                    job@happycash.ph
+                  </a>
                 </div>
               </div>
               <div className="mt-8 grid grid-cols-2 gap-8 text-sm sm:grid-cols-3">
                 <div>
-                  <h3 className="mb-2 font-semibold text-custom-yellow">Office Hours:</h3>
-                  <p className="text-slate-200">Monday-Sunday:<br />7:00-21:00</p>
+                  <h3 className="mb-2 font-semibold text-custom-yellow">
+                    Office Hours:
+                  </h3>
+                  <p className="text-slate-200">
+                    Monday-Sunday:
+                    <br />
+                    7:00 AM - 9:00 PM
+                  </p>
                 </div>
                 <div className="sm:col-span-2">
-                  <h3 className="mb-2 font-semibold text-custom-yellow">Address</h3>
+                  <h3 className="mb-2 font-semibold text-custom-yellow">
+                    Address
+                  </h3>
                   <p className="text-slate-200">
                     26th Floor, The World Center, Gil Puyat Ave., Brgy. Bel-Air,
                     Makati City, Philippines
@@ -101,15 +146,17 @@ export default function Footer() {
                 operated by Yinshan Lending Inc., a licensed financing company
                 with SEC Registration No. CS201900108 and Certificate of
                 Authority No. 2860. Please always study the{" "}
-                <Link href="/terms" className="underline hover:text-custom-yellow">
+                <Link
+                  href="/terms"
+                  className="underline hover:text-custom-yellow"
+                >
                   terms and conditions
                 </Link>
-                ,{" "}
-                <Link href="/disclosure" className="underline hover:text-custom-yellow">
-                  disclosure statement
-                </Link>
-                , and{" "}
-                <Link href="/privacy" className="underline hover:text-custom-yellow">
+                , disclosure statement , and{" "}
+                <Link
+                  href="/privacy"
+                  className="underline hover:text-custom-yellow"
+                >
                   privacy agreement
                 </Link>{" "}
                 before proceeding with any transaction.
@@ -132,7 +179,8 @@ export default function Footer() {
 
           {/* Bottom area: Copyright */}
           <div className="border-t border-slate-700 pt-6 mt-8 text-sm text-slate-500">
-            &copy; {new Date().getFullYear()} Yinshan Lending INC. All Rights Reserved
+            &copy; {new Date().getFullYear()} Yinshan Lending INC. All Rights
+            Reserved
           </div>
         </div>
       </div>

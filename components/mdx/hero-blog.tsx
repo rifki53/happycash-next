@@ -10,8 +10,7 @@ export default function HeroBlog() {
           <div className="text-center md:text-left order-last md:order-first">
             <h1 className="mb-4 text-4xl font-extrabold leading-tight tracking-tighter text-white md:text-5xl">
               <span className="text-custom-yellow">
-                Learn More <br />
-                About Us
+                Latest News <br />& Activities
               </span>
             </h1>
           </div>
@@ -27,7 +26,7 @@ export default function HeroBlog() {
               sizes="(max-width: 768px) 80vw, 400px"
               className="h-auto w-3/4 md:w-full max-w-[400px] pt-8 md:pt-4"
               priority
-              quality={85} 
+              quality={85}
             />
           </div>
         </div>
