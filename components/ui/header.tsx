@@ -94,7 +94,7 @@ export default function Header() {
             <li>
               <Link
                 href="/get-app"
-                className="rounded-lg bg-custom-darkgreen px-5 py-2.5 text-sm font-medium text-custom-yellow shadow-sm hover:bg-gray-900"
+                className="rounded-lg bg-custom-slate px-5 py-2.5 text-sm font-medium text-custom-yellow shadow-sm hover:bg-gray-900"
               >
                 Get the App
               </Link>
