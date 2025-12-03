@@ -13,7 +13,7 @@ const testimonials = [
     name: "Catherine",
     date: "", // Tanggal tidak ada di desain, jadi dikosongkan
     content:
-      "“Napakababa ng interest na ibinibigay ni happycash. Bukod sa maliit ang interest ang gaaan pa ng hulog sa bayaran”",
+      "“Napakababa ng interest na ibinibigay ni Happycash. Bukod sa maliit ang interest ang gaaan pa ng hulog sa bayaran”",
     videoThumb: catherineImage, // Menggunakan gambar utama sebagai thumbnail video
     videoUrl: "https://pub.happycash.ph/video/HC-CATHERINE-15SEC-1.3.mp4",
   },

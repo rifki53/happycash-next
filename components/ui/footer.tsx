@@ -57,6 +57,7 @@ export default function Footer() {
                 <div>
                   <h3 className="mb-2 font-semibold text-custom-yellow">Hotline</h3>
                   <ul className="space-y-1 text-slate-200">
+                    <li><a href="tel:+63277770111" className="transition hover:text-white">(+63)277770111</a></li>
                     <li><a href="tel:+639102626060" className="transition hover:text-white">(+63)9102626060</a></li>
                     <li><a href="tel:+639085848852" className="transition hover:text-white">(+63)9085848852</a></li>
                   </ul>
@@ -73,7 +74,7 @@ export default function Footer() {
               <div className="mt-8 grid grid-cols-2 gap-8 text-sm sm:grid-cols-3">
                 <div>
                   <h3 className="mb-2 font-semibold text-custom-yellow">Office Hours:</h3>
-                  <p className="text-slate-200">Monday-Sunday:<br />9:00-18:00</p>
+                  <p className="text-slate-200">Monday-Sunday:<br />7:00-21:00</p>
                 </div>
                 <div className="sm:col-span-2">
                   <h3 className="mb-2 font-semibold text-custom-yellow">Address</h3>

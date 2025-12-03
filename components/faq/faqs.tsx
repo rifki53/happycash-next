@@ -110,24 +110,22 @@ export default function Faqs() {
 
   return (
     <section className="bg-gray-100">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:pt-2 pt-22 md:py-20">
-        {/* Tab Navigation - Aligned Left */}
-        <div className="mb-8">
-          <div className="inline-flex bg-white rounded-xl items-center shadow-md w-full">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`text-center py-3 px-6 mr-6 rounded-xl transition-colors duration-300 focus:outline-none ${
-                  activeTab === tab.id
-                    ? "bg-custom-slate text-custom-yellow shadow"
-                    : "text-gray-600 hover:bg-gray-200"
-                }`}
-              >
-                {tab.name}
-              </button>
-            ))}
-          </div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:pt-30 pt-22 md:py-20">
+        {/* Categories */}
+        <div className="mb-10 flex flex-wrap gap-2">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`btn-sm font-normal shadow-sm transition-colors duration-200 ${
+                activeTab === tab.id
+                  ? "bg-gray-800 text-gray-200 hover:bg-gray-900" // Active Style
+                  : "bg-white text-gray-800 hover:bg-gray-50" // Inactive Style
+              }`}
+            >
+              {tab.name}
+            </button>
+          ))}
         </div>
 
         {/* Accordion List */}

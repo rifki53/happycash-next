@@ -16,7 +16,7 @@ const testimonials = [
     role: "Business owner",
     stars: 5,
     content:
-      "Napakababa ng interest na ibinibigay ni happycash. Bukod sa maliit ang interest ang gaaan pa ng hulog sa bayaran.",
+      "Napakababa ng interest na ibinibigay ni Happycash. Bukod sa maliit ang interest ang gaaan pa ng hulog sa bayaran.",
     videoUrl:
       "https://assets.Happycash.com/Happycash/media/0920+60sec-App-landscape.mp4",
   },
@@ -32,7 +32,7 @@ const testimonials = [
   {
     img: mariaImage,
     name: "Maria",
-    role: "Bpo Employee",
+    role: "BPO Employee",
     stars: 5,
     content: "Ang kinaganda nun, kumbaga on the spot makukuha mo siya kaagad.",
     videoUrl:
