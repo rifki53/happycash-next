@@ -52,13 +52,13 @@ export default function Features() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-center text-center">
-              {/* Icon */}
+              {/* Icon - Reduced size to 96x96 */}
               <div className="mb-4">
                 <Image
                   src={feature.icon}
                   alt={`${feature.title} icon`}
-                  width={128}
-                  height={128}
+                  width={96}
+                  height={96}
                   className="h-auto"
                 />
               </div>
