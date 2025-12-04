@@ -1315,7 +1315,6 @@ export default function ContentPrivacyPolicy() {
         </div>
         <style jsx>
           {`
-            @import url(https://themes.googleusercontent.com/fonts/css?kit=MSSLfUayeNh9PW3ng9UWrnyI0-VqwCFmIEXfDNyvSCDQrCWd_Sbvy8b_vb_q7UdJ);
             .lst-kix_list_33-5 > li {
               counter-increment: lst-ctn-kix_list_33-5;
             }
