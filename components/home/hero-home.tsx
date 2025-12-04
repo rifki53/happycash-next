@@ -43,6 +43,8 @@ export default function Hero() {
                 <Link
                   key={index}
                   href={button.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={button.alt}
                   className="group relative flex items-center justify-center rounded-xl bg-white  p-3 transition-all duration-200 hover:bg-white md:hover:rounded-b-xl md:hover:rounded-t-none"
                 >

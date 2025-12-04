@@ -9,13 +9,13 @@ import single from "@/public/images/get-app/single.png";
 
 const downloadInfo = [
   {
-    href: "#",
+    href: "https://apps.apple.com/ph/app/happycash-online-credit-loan/id6502511711",
     qr: qrCode,
     buttonImage: iosButton,
     alt: "Download on the App Store",
   },
   {
-    href: "#",
+    href: "https://play.google.com/store/apps/details?id=com.happy.cash.fast.credit.loan.mobile.lending&gl=ph",
     qr: qrCode,
     buttonImage: androidButton,
     alt: "Get it on Google Play",
@@ -60,7 +60,11 @@ export default function GetApp() {
                     alt={`${item.alt} QR Code`}
                     className="rounded-xl border border-gray-900"
                   />
-                  <Link href={item.href}>
+                  <Link
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       src={item.buttonImage}
                       alt={item.alt}
