@@ -4,7 +4,7 @@ export default function ContentPrivacyPolicy() {
   return (
     <>
       <section className="relative">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-18 my-18">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-18 my-18 font-inter">
           <p className="c11">
             <span className="c1">PRIVACY POLICY</span>
           </p>
@@ -1898,7 +1898,7 @@ export default function ContentPrivacyPolicy() {
               text-decoration: none;
               vertical-align: baseline;
               font-size: 12pt;
-              font-family: "Times New Roman";
+              font-family: "Inter";
               font-style: normal;
             }
             .c6 {
@@ -1925,7 +1925,7 @@ export default function ContentPrivacyPolicy() {
               text-decoration: none;
               vertical-align: baseline;
               font-size: 12pt;
-              font-family: "Times New Roman";
+              font-family: "Inter";
               font-style: normal;
             }
             .c22 {
@@ -1990,12 +1990,12 @@ export default function ContentPrivacyPolicy() {
             .c4 {
               font-size: 12pt;
               font-weight: 700;
-              font-family: "Times New Roman";
+              font-family: "Inter";
             }
             .c3 {
               font-size: 12pt;
               font-weight: 400;
-              font-family: "Times New Roman";
+              font-family: "Inter";
             }
             .c13 {
               background-color: #ffffff;
@@ -2047,7 +2047,7 @@ export default function ContentPrivacyPolicy() {
               font-weight: 700;
               font-size: 36pt;
               padding-bottom: 6pt;
-              font-family: "Calibri";
+              font-family: "Inter";
               line-height: 1.0791666666666666;
               page-break-after: avoid;
               orphans: 2;
@@ -2059,7 +2059,7 @@ export default function ContentPrivacyPolicy() {
               color: #666666;
               font-size: 24pt;
               padding-bottom: 4pt;
-              font-family: "Georgia";
+              font-family: "Inter";
               line-height: 1.0791666666666666;
               page-break-after: avoid;
               font-style: italic;
@@ -2070,13 +2070,13 @@ export default function ContentPrivacyPolicy() {
             li {
               color: #000000;
               font-size: 11pt;
-              font-family: "Calibri";
+              font-family: "Inter";
             }
             p {
               margin: 0;
               color: #000000;
               font-size: 11pt;
-              font-family: "Calibri";
+              font-family: "Inter";
             }
             h1 {
               padding-top: 24pt;
@@ -2084,7 +2084,7 @@ export default function ContentPrivacyPolicy() {
               font-weight: 700;
               font-size: 24pt;
               padding-bottom: 6pt;
-              font-family: "Calibri";
+              font-family: "Inter";
               line-height: 1.0791666666666666;
               page-break-after: avoid;
               orphans: 2;
@@ -2097,7 +2097,7 @@ export default function ContentPrivacyPolicy() {
               font-weight: 700;
               font-size: 18pt;
               padding-bottom: 4pt;
-              font-family: "Calibri";
+              font-family: "Inter";
               line-height: 1.0791666666666666;
               page-break-after: avoid;
               orphans: 2;
@@ -2110,7 +2110,7 @@ export default function ContentPrivacyPolicy() {
               font-weight: 700;
               font-size: 13.5pt;
               padding-bottom: 8pt;
-              font-family: "Times New Roman";
+              font-family: "Inter";
               line-height: 1;
               orphans: 2;
               widows: 2;
@@ -2122,7 +2122,7 @@ export default function ContentPrivacyPolicy() {
               font-weight: 700;
               font-size: 12pt;
               padding-bottom: 8pt;
-              font-family: "Times New Roman";
+              font-family: "Inter";
               line-height: 1;
               orphans: 2;
               widows: 2;
@@ -2134,7 +2134,7 @@ export default function ContentPrivacyPolicy() {
               font-weight: 700;
               font-size: 11pt;
               padding-bottom: 2pt;
-              font-family: "Calibri";
+              font-family: "Inter";
               line-height: 1.0791666666666666;
               page-break-after: avoid;
               orphans: 2;
@@ -2147,7 +2147,7 @@ export default function ContentPrivacyPolicy() {
               font-weight: 700;
               font-size: 10pt;
               padding-bottom: 2pt;
-              font-family: "Calibri";
+              font-family: "Inter";
               line-height: 1.0791666666666666;
               page-break-after: avoid;
               orphans: 2;

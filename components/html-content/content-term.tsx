@@ -6893,7 +6893,7 @@ export default function ContentPrivacyPolicy() {
               vertical-align: baseline;
               text-decoration-skip-ink: none;
               font-size: 10pt;
-              font-family: "Tahoma";
+              font-family: "Inter";
               font-style: normal;
             }
             .c26 {
@@ -6902,7 +6902,7 @@ export default function ContentPrivacyPolicy() {
               text-decoration: none;
               vertical-align: baseline;
               font-size: 12pt;
-              font-family: "Tahoma";
+              font-family: "Inter";
               font-style: normal;
             }
             .c17 {
@@ -6911,7 +6911,7 @@ export default function ContentPrivacyPolicy() {
               text-decoration: none;
               vertical-align: baseline;
               font-size: 9pt;
-              font-family: "Tahoma";
+              font-family: "Inter";
               font-style: normal;
             }
             .c3 {
@@ -6920,7 +6920,7 @@ export default function ContentPrivacyPolicy() {
               text-decoration: none;
               vertical-align: baseline;
               font-size: 10pt;
-              font-family: "Tahoma";
+              font-family: "Inter";
               font-style: normal;
             }
             .c19 {
@@ -6929,7 +6929,7 @@ export default function ContentPrivacyPolicy() {
               text-decoration: none;
               vertical-align: baseline;
               font-size: 11pt;
-              font-family: "Tahoma";
+              font-family: "Inter";
               font-style: normal;
             }
             .c7 {
@@ -6938,7 +6938,7 @@ export default function ContentPrivacyPolicy() {
               text-decoration: none;
               vertical-align: baseline;
               font-size: 10pt;
-              font-family: "Tahoma";
+              font-family: "Inter";
               font-style: normal;
             }
             .c6 {
@@ -6947,7 +6947,7 @@ export default function ContentPrivacyPolicy() {
               text-decoration: none;
               vertical-align: baseline;
               font-size: 12pt;
-              font-family: "Tahoma";
+              font-family: "Inter";
               font-style: normal;
             }
             .c14 {
@@ -6986,7 +6986,7 @@ export default function ContentPrivacyPolicy() {
             .c15 {
               vertical-align: sub;
               font-size: 10pt;
-              font-family: "Tahoma";
+              font-family: "Inter";
               font-weight: 400;
             }
             .c22 {
@@ -6998,7 +6998,7 @@ export default function ContentPrivacyPolicy() {
             .c18 {
               vertical-align: super;
               font-size: 10pt;
-              font-family: "Tahoma";
+              font-family: "Inter";
               font-weight: 400;
             }
             .c24 {
@@ -7010,7 +7010,7 @@ export default function ContentPrivacyPolicy() {
             .c23 {
               font-size: 10pt;
               font-weight: 400;
-              font-family: "Tahoma";
+              font-family: "Inter";
             }
             .c20 {
               background-color: #ffffff;
@@ -7059,7 +7059,7 @@ export default function ContentPrivacyPolicy() {
               color: #000000;
               font-size: 28pt;
               padding-bottom: 4pt;
-              font-family: "Calibri";
+              font-family: "Inter";
               line-height: 1;
               orphans: 2;
               widows: 2;
@@ -7070,7 +7070,7 @@ export default function ContentPrivacyPolicy() {
               color: #595959;
               font-size: 14pt;
               padding-bottom: 8pt;
-              font-family: "Calibri";
+              font-family: "Inter";
               line-height: 1.1583333333333334;
               orphans: 2;
               widows: 2;
@@ -7079,20 +7079,20 @@ export default function ContentPrivacyPolicy() {
             li {
               color: #000000;
               font-size: 12pt;
-              font-family: "Calibri";
+              font-family: "Inter";
             }
             p {
               margin: 0;
               color: #000000;
               font-size: 12pt;
-              font-family: "Calibri";
+              font-family: "Inter";
             }
             h1 {
               padding-top: 18pt;
               color: #2f5496;
               font-size: 20pt;
               padding-bottom: 4pt;
-              font-family: "Calibri";
+              font-family: "Inter";
               line-height: 1.1583333333333334;
               page-break-after: avoid;
               orphans: 2;
@@ -7104,7 +7104,7 @@ export default function ContentPrivacyPolicy() {
               color: #2f5496;
               font-size: 16pt;
               padding-bottom: 4pt;
-              font-family: "Calibri";
+              font-family: "Inter";
               line-height: 1.1583333333333334;
               page-break-after: avoid;
               orphans: 2;
@@ -7116,7 +7116,7 @@ export default function ContentPrivacyPolicy() {
               color: #2f5496;
               font-size: 14pt;
               padding-bottom: 4pt;
-              font-family: "Calibri";
+              font-family: "Inter";
               line-height: 1.1583333333333334;
               page-break-after: avoid;
               orphans: 2;
@@ -7128,7 +7128,7 @@ export default function ContentPrivacyPolicy() {
               color: #2f5496;
               font-size: 12pt;
               padding-bottom: 2pt;
-              font-family: "Calibri";
+              font-family: "Inter";
               line-height: 1.1583333333333334;
               page-break-after: avoid;
               font-style: italic;
@@ -7141,7 +7141,7 @@ export default function ContentPrivacyPolicy() {
               color: #2f5496;
               font-size: 12pt;
               padding-bottom: 2pt;
-              font-family: "Calibri";
+              font-family: "Inter";
               line-height: 1.1583333333333334;
               page-break-after: avoid;
               orphans: 2;
@@ -7153,7 +7153,7 @@ export default function ContentPrivacyPolicy() {
               color: #595959;
               font-size: 12pt;
               padding-bottom: 0pt;
-              font-family: "Calibri";
+              font-family: "Inter";
               line-height: 1.1583333333333334;
               page-break-after: avoid;
               font-style: italic;
