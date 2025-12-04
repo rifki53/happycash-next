@@ -757,125 +757,112 @@ export default function ContentPrivacyPolicy() {
           <p className="c7 c8">
             <span className="c2"></span>
           </p>
-          <p className="c11">
+          <p className="c11 pt-4">
             <span className="c2">
               We have categorized the data we retain, the reasons for retention,
               and the duration below:
             </span>
           </p>
-          <table className="c27">
-            <tbody>
-              <tr className="c10">
-                <td className="c5" colSpan={1} rowSpan={1}>
-                  <p className="c11">
-                    <span className="c1">Data Category</span>
-                  </p>
-                </td>
-                <td className="c5" colSpan={1} rowSpan={1}>
-                  <p className="c11">
-                    <span className="c1">Purpose of Retention</span>
-                  </p>
-                </td>
-                <td className="c5" colSpan={1} rowSpan={1}>
-                  <p className="c11">
-                    <span className="c1">Retention Period</span>
-                  </p>
-                </td>
-              </tr>
-              <tr className="c10">
-                <td className="c5" colSpan={1} rowSpan={1}>
-                  <p className="c7">
-                    <span className="c2">
-                      Personal Identification Data (e.g. your name, date of
-                      birth, address, government ID details)
-                    </span>
-                  </p>
-                </td>
-                <td className="c5" colSpan={1} rowSpan={1}>
-                  <p className="c7">
-                    <span className="c2">
+
+          <div className="w-full overflow-x-auto">
+            <table className="w-full border-collapse border border-gray-400 text-sm text-left">
+              <thead>
+                <tr>
+                  <th className="border border-gray-400 p-5 font-bold text-black w-1/4">
+                    Data Category
+                  </th>
+                  <th className="border border-gray-400 p-5 font-bold text-black w-2/4">
+                    Purpose of Retention
+                  </th>
+                  <th className="border border-gray-400 p-5 font-bold text-black w-1/4">
+                    Retention Period
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* Row 1 */}
+                <tr>
+                  <td className="border border-gray-400 p-5 align-top text-black leading-relaxed">
+                    <p>
+                      Personal Identification Data <br />
+                      <span className="font-normal text-gray-700">
+                        (e.g. your name, date of birth, address, government ID
+                        details)
+                      </span>
+                    </p>
+                  </td>
+                  <td className="border border-gray-400 p-5 align-top text-black leading-relaxed">
+                    <p>
                       To comply with customer verification requirements mandated
-                      by the Securities and Exchange Commission &nbsp; (SEC) and
-                      the Anti-Money Laundering Council (AMLC) under the
-                      Anti-Money Laundering Act (AMLA).
-                    </span>
-                  </p>
-                  <p className="c7 c8">
-                    <span className="c2"></span>
-                  </p>
-                </td>
-                <td className="c5" colSpan={1} rowSpan={1}>
-                  <p className="c7">
-                    <span className="c4">Up to ten (10) years</span>
-                    <span className="c2">
-                      &nbsp;from the date of your last transaction or the
-                      closure of your account, whichever is later.
-                    </span>
-                  </p>
-                </td>
-              </tr>
-              <tr className="c10">
-                <td className="c5" colSpan={1} rowSpan={1}>
-                  <p className="c7">
-                    <span className="c2">
-                      Loan and Transaction History (e.g. loan agreements,
-                      payment records, transaction amounts and dates)
-                    </span>
-                  </p>
-                </td>
-                <td className="c5" colSpan={1} rowSpan={1}>
-                  <p className="c7">
-                    <span className="c2">
+                      by the Securities and Exchange Commission (SEC) and the
+                      Anti-Money Laundering Council (AMLC) under the Anti-Money
+                      Laundering Act (AMLA).
+                    </p>
+                  </td>
+                  <td className="border border-gray-400 p-5 align-top text-black leading-relaxed">
+                    <p>
+                      <span className="font-bold">Up to ten (10) years</span>{" "}
+                      from the date of your last transaction or the closure of
+                      your account, whichever is later.
+                    </p>
+                  </td>
+                </tr>
+
+                {/* Row 2 */}
+                <tr>
+                  <td className="border border-gray-400 p-5 align-top text-black leading-relaxed">
+                    <p>
+                      Loan and Transaction History <br />
+                      <span className="font-normal text-gray-700">
+                        (e.g. loan agreements, payment records, transaction
+                        amounts and dates)
+                      </span>
+                    </p>
+                  </td>
+                  <td className="border border-gray-400 p-5 align-top text-black leading-relaxed">
+                    <p>
                       To comply with record-keeping laws from the Bangko Sentral
                       ng Pilipinas (BSP) and the Bureau of Internal Revenue
                       (BIR). This data is also necessary for resolving potential
                       disputes and for audit purposes.
-                    </span>
-                  </p>
-                  <p className="c7 c8">
-                    <span className="c2"></span>
-                  </p>
-                </td>
-                <td className="c5" colSpan={1} rowSpan={1}>
-                  <p className="c7">
-                    <span className="c4">Up to ten (10) years</span>
-                    <span className="c2">
-                      &nbsp;from the date of your last transaction or the
-                      closure of your account, whichever is later.
-                    </span>
-                  </p>
-                </td>
-              </tr>
-              <tr className="c10">
-                <td className="c5" colSpan={1} rowSpan={1}>
-                  <p className="c7">
-                    <span className="c3">Communications &amp; Inquiries</span>
-                    <span className="c4">&nbsp;</span>
-                    <span className="c2">
-                      (e.g., records of your customer service inquiries or
-                      complaints)
-                    </span>
-                  </p>
-                </td>
-                <td className="c5" colSpan={1} rowSpan={1}>
-                  <p className="c24">
-                    <span className="c2">
+                    </p>
+                  </td>
+                  <td className="border border-gray-400 p-5 align-top text-black leading-relaxed">
+                    <p>
+                      <span className="font-bold">Up to ten (10) years</span>{" "}
+                      from the date of your last transaction or the closure of
+                      your account, whichever is later.
+                    </p>
+                  </td>
+                </tr>
+
+                {/* Row 3 */}
+                <tr>
+                  <td className="border border-gray-400 p-5 align-top text-black leading-relaxed">
+                    <p>
+                      Communications &amp; Inquiries <br />
+                      <span className="font-normal text-gray-700">
+                        (e.g., records of your customer service inquiries or
+                        complaints)
+                      </span>
+                    </p>
+                  </td>
+                  <td className="border border-gray-400 p-5 align-top text-black leading-relaxed">
+                    <p>
                       To maintain a record for quality assurance, dispute
                       resolution, and as evidence in case of legal proceedings.
-                    </span>
-                  </p>
-                </td>
-                <td className="c5" colSpan={1} rowSpan={1}>
-                  <p className="c24">
-                    <span className="c4">Up to ten (10) years</span>
-                    <span className="c2">
-                      &nbsp;from the date of the communication.
-                    </span>
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                    </p>
+                  </td>
+                  <td className="border border-gray-400 p-5 align-top text-black leading-relaxed">
+                    <p>
+                      <span className="font-bold">Up to ten (10) years</span>{" "}
+                      from the date of the communication.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <p className="c7 c8">
             <span className="c2"></span>
@@ -1108,7 +1095,6 @@ export default function ContentPrivacyPolicy() {
         </div>
         <style jsx>
           {`
-            @import url(https://themes.googleusercontent.com/fonts/css?kit=fpjTOVmNbO4Lz34iLyptLUXza5VhXqVC6o75Eld_V98);
             ul.lst-kix_list_1-0 {
               list-style-type: none;
             }
