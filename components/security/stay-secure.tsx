@@ -1,7 +1,15 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
 
 export default function StaySecure() {
+  const handleScrollToFooter = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth", // This makes the scroll smooth
+    });
+  };
+
   return (
     <section className="bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-20">
@@ -21,12 +29,13 @@ export default function StaySecure() {
             experience.
           </p>
           <div className="mt-8">
-            <a
-              href="/contact-us" // Or the appropriate link
+            {/* Updated Button */}
+            <button
+              onClick={handleScrollToFooter}
               className="bg-slate-800 text-custom-yellow font-bold py-3 px-8 rounded-lg hover:bg-slate-700 transition duration-300"
             >
               Contact Us
-            </a>
+            </button>
           </div>
         </div>
 

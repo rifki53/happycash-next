@@ -678,7 +678,7 @@ export default function ContentPrivacyPolicy() {
           </p>
           <p className="c6">
             <span className="c3 c28">
-              You have the right to request the deletion of your HappyCash
+              You have the right to request the deletion of your Happycash
               account at any time through the functionality provided within our
               app and/or via
             </span>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const PrivacySection = () => {
   return (
     <section className="bg-white relative">
@@ -31,12 +33,12 @@ const PrivacySection = () => {
           </p>
 
           {/* Privacy Agreement Button */}
-          <a
-            href="/privacy-policy" // Change this to the actual link for your privacy agreement
+          <Link
+            href="/privacy" // Change this to the actual link for your privacy agreement
             className="inline-block bg-[#0A252C] text-custom-yellow font-semibold px-8 py-3 rounded-md shadow-md hover:bg-gray-800 transition-colors duration-300"
           >
             Privacy Agreement
-          </a>
+          </Link>
         </div>
       </div>
     </section>

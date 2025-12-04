@@ -22,7 +22,9 @@ export default function Footer() {
                 <ul className="flex space-x-2">
                   <li>
                     <Link
-                      href="#0" // Ganti dengan link Facebook Anda
+                      href="https://www.facebook.com/HappyCash.official.ph/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-slate-900 transition hover:bg-custom-yellow"
                       aria-label="Facebook"
                     >
@@ -31,7 +33,9 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#0" // Ganti dengan link Instagram Anda
+                      href="https://www.instagram.com/happycash_ph/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-slate-900 transition hover:bg-custom-yellow"
                       aria-label="Instagram"
                     >
@@ -40,7 +44,9 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#0" // Ganti dengan link Youtube Anda
+                      href="https://www.youtube.com/@Happycash-Official"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-slate-900 transition hover:bg-custom-yellow"
                       aria-label="YouTube"
                     >

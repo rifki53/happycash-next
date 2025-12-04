@@ -16,7 +16,9 @@ export type PageKey =
   | "blog"
   | "security"
   | "faq"
-  | "getApp";
+  | "getApp"
+  | "privacy"
+  | "terms";
 
 // Database SEO Anda
 const seoData: Record<PageKey, PageSEO> = {
@@ -70,6 +72,18 @@ const seoData: Record<PageKey, PageSEO> = {
     description:
       "Download the Happycash loan app — get instant access to ₱25,000 cash and manage repayments smoothly.",
     keywords: ["download loan app", "apk download", "install Happycash"],
+  },
+  privacy: {
+    title: "Privacy Policy",
+    description:
+      "We protect your data and clearly explain how we collect, use, and keep your personal information safe.",
+    keywords: ["data protection", "privacy policy"],
+  },
+  terms: {
+    title: "Terms and Conditions",
+    description:
+      "Clear rules for using our services, outlining user responsibilities, limitations, and legal guidelines.",
+    keywords: ["loan agreement", "user terms"],
   },
 };
 

@@ -63,7 +63,7 @@ export default function Faqs() {
       {
         question: "How do I make a payment?",
         answer:
-          "To do this, please log in to the Happycash app and follow the instructions. You can repay your loan via 7Eleven, GCash, Paymaya, Cebuana Lhuillier many more!",
+          "To do this, please log in to the Happycash app and follow the instructions. You can repay your loan via 7-Eleven, GCash, Paymaya, Cebuana, Lhuillier and many more!",
       },
       {
         question:
@@ -80,7 +80,7 @@ export default function Faqs() {
         question:
           "I already made a payment. How long is the posting of my loan payment?",
         answer:
-          "Verification of loan payments will be processed no later than 2 hours after you make a payment. If your payment has not been updated, please fill in the feedback.",
+          "Verification of loan payments will be processed no later than 2 hours after you make a payment. If your payment has not been updated, please fill in the feedback form.",
       },
     ],
     other: [

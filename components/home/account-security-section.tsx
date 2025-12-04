@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const AccountSecuritySection = () => {
   return (
@@ -58,9 +59,12 @@ const AccountSecuritySection = () => {
             </p>
 
             <div className="mt-2 lg:mt-4">
-              <button className="bg-gray-800 text-custom-yellow font-bold py-3 px-8 lg:py-4 lg:px-10 rounded-lg hover:bg-gray-700 transition-colors text-sm lg:text-base">
+              <Link
+                href="/security"
+                className="bg-gray-800 text-custom-yellow font-bold py-3 px-8 lg:py-4 lg:px-10 rounded-lg hover:bg-gray-700 transition-colors text-sm lg:text-base"
+              >
                 Safety Tips
-              </button>
+              </Link>
             </div>
           </div>
         </div>
