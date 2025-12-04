@@ -6,15 +6,16 @@ const NotFoundSection = () => {
     <section className="relative">
       <div className="mx-auto w-full max-w-6xl px-4 py-10 pt-28 sm:px-6 lg:px-8">
         <div className="flex w-full flex-col items-center md:flex-row md:items-start">
-          {/* <div className="flex w-full items-center justify-center p-4 md:w-1/2 md:justify-end md:p-6">
+          <div className="flex w-full items-center justify-center p-4 md:w-1/2 md:justify-end md:p-6">
+            {/* Updated Image classes to w-full */}
             <Image
-              src="/images/punpun/skate.png"
+              src="/images/404-mascot.png"
               alt="Not Found Illustration"
               width={288}
               height={288}
-              className="h-auto w-60 max-w-full md:w-72"
+              className="w-full h-auto"
             />
-          </div> */}
+          </div>
           <div className="flex w-full flex-col items-center justify-center p-4 text-center md:w-1/2 md:items-start md:p-8 md:text-left">
             <h1 className="mb-2 text-6xl font-bold text-gray-800 sm:text-7xl md:text-[12rem]">
               404
