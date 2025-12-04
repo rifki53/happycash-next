@@ -850,86 +850,87 @@ export default function ContentPrivacyPolicy() {
             <li className="c0 c2 li-bullet-1">
               <span className="c3">Event of Default</span>
             </li>
-          </ol>
-          <p className="c0 c5">
-            <span className="c3">
-              Any and all of the following shall constitute Events of Default:
-            </span>
-          </p>
-          <ul className="c4 lst-kix_list_33-1 start">
-            <li className="c0 c1 li-bullet-1">
+            <p className="c0 c5">
               <span className="c3">
-                Failure by Borrower to comply with or perform any of the terms
-                and conditions of the Loan Agreement, Terms &amp; Conditions, or
-                any other agreements between Borrower and Lender;
+                Any and all of the following shall constitute Events of Default:
               </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_34-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                Borrower fails to pay when due and payable any principal
-                amounts, interests, costs which Borrower is obliged to pay the
-                Lender under the Loan Agreement and the Terms &amp; Conditions;
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_35-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                Any representation or warranty made by Borrower herein or
-                otherwise in connection with the Loan shall prove to have been
-                incorrect or misleading as of the time it was made or deemed to
-                have been made, and without reference to whether or not Lender
-                was in fact prejudiced by such untruthfulness and/or
-                non-fulfillment;
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_36-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                Borrower voluntarily suspends or ceases his/her personal
-                financial conditions or becomes insolvent or is unable to pay
-                his/her debts when they become due or commits or permits any act
-                of bankruptcy or insolvency;
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_37-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                Any final judgment or decree for a substantial sum of money,
-                damages or for a fine or penalty is entered against Borrower by
-                a court of competent jurisdiction and is not paid, discharged or
-                fully bonded within ten (10) days after the date when payment of
-                such judgment or decree is due under applicable laws;
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_38-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                Borrower dies or is convicted of a criminal offense with final
-                judgment carrying with it a penalty of civil interdiction
-                affecting Borrower, or in any of the cases covered by Article
-                1198 of the Civil Code of the Philippines;
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_39-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                There shall have occurred a material change in the financial
-                circumstances or condition of Borrower reckoned from the
-                approval of the Loan, which, in the reasonable opinion of
-                Lender, would adversely affect the ability of Borrower to
-                perform the obligations under the Loan Agreement and the
-                Promissory Note.
-              </span>
-            </li>
-          </ul>
-          <ol className="c4 lst-kix_list_39-0 start" start={1}>
+            </p>
+            <ul className="c4 lst-kix_list_33-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  Failure by Borrower to comply with or perform any of the terms
+                  and conditions of the Loan Agreement, Terms &amp; Conditions,
+                  or any other agreements between Borrower and Lender;
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_34-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  Borrower fails to pay when due and payable any principal
+                  amounts, interests, costs which Borrower is obliged to pay the
+                  Lender under the Loan Agreement and the Terms &amp;
+                  Conditions;
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_35-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  Any representation or warranty made by Borrower herein or
+                  otherwise in connection with the Loan shall prove to have been
+                  incorrect or misleading as of the time it was made or deemed
+                  to have been made, and without reference to whether or not
+                  Lender was in fact prejudiced by such untruthfulness and/or
+                  non-fulfillment;
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_36-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  Borrower voluntarily suspends or ceases his/her personal
+                  financial conditions or becomes insolvent or is unable to pay
+                  his/her debts when they become due or commits or permits any
+                  act of bankruptcy or insolvency;
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_37-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  Any final judgment or decree for a substantial sum of money,
+                  damages or for a fine or penalty is entered against Borrower
+                  by a court of competent jurisdiction and is not paid,
+                  discharged or fully bonded within ten (10) days after the date
+                  when payment of such judgment or decree is due under
+                  applicable laws;
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_38-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  Borrower dies or is convicted of a criminal offense with final
+                  judgment carrying with it a penalty of civil interdiction
+                  affecting Borrower, or in any of the cases covered by Article
+                  1198 of the Civil Code of the Philippines;
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_39-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  There shall have occurred a material change in the financial
+                  circumstances or condition of Borrower reckoned from the
+                  approval of the Loan, which, in the reasonable opinion of
+                  Lender, would adversely affect the ability of Borrower to
+                  perform the obligations under the Loan Agreement and the
+                  Promissory Note.
+                </span>
+              </li>
+            </ul>
+
             <li className="c0 c2 li-bullet-1">
               <span className="c3">Consequence of Default</span>
             </li>
@@ -1145,61 +1146,59 @@ export default function ContentPrivacyPolicy() {
             <li className="c0 c2 li-bullet-1">
               <span className="c3">Notice to the Borrower</span>
             </li>
-          </ol>
-          <p className="c0">
-            <span className="c3">
-              A notice given to the Borrower in connection with this Loan
-              Agreement and/or the Promissory Note may be delivered by hand or
-              sent by prepaid ordinary post or sent by email (electronic mail)
-              or sent by facsimile to the facsimile number of the addressee or
-              sent by message to the mobile number of the addressee which is
-              specified in the Loan Application form and/or the Promissory Note.
-              A notice given to the Borrower shall be treated as having been
-              given and received:
-            </span>
-          </p>
-          <ul className="c4 lst-kix_list_50-1 start">
-            <li className="c0 c1 li-bullet-2">
+            <p className="c0">
               <span className="c3">
-                If delivered, on the day of delivery if a Calendar Day,
-                otherwise on the next Business Day;
+                A notice given to the Borrower in connection with this Loan
+                Agreement and/or the Promissory Note may be delivered by hand or
+                sent by prepaid ordinary post or sent by email (electronic mail)
+                or sent by facsimile to the facsimile number of the addressee or
+                sent by message to the mobile number of the addressee which is
+                specified in the Loan Application form and/or the Promissory
+                Note. A notice given to the Borrower shall be treated as having
+                been given and received:
               </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_51-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                If sent by prepaid mail, on the second Business Day after
-                posting;
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_52-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                If sent by email and no failure notice is received by the
-                sender, one hour after the time of the sending of the email;
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_53-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                If transmitted by facsimile and a correct and complete
-                transmission report is received, at the time of transmission
-                recorded on that transmission report;
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_54-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                If sent by text message and no failure notice is received by the
-                sender, at the time of sending.
-              </span>
-            </li>
-          </ul>
-          <ol className="c4 lst-kix_list_54-0 start" start={1}>
+            </p>
+            <ul className="c4 lst-kix_list_50-1 start">
+              <li className="c0 c1 li-bullet-2">
+                <span className="c3">
+                  If delivered, on the day of delivery if a Calendar Day,
+                  otherwise on the next Business Day;
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_51-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  If sent by prepaid mail, on the second Business Day after
+                  posting;
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_52-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  If sent by email and no failure notice is received by the
+                  sender, one hour after the time of the sending of the email;
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_53-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  If transmitted by facsimile and a correct and complete
+                  transmission report is received, at the time of transmission
+                  recorded on that transmission report;
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_54-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  If sent by text message and no failure notice is received by
+                  the sender, at the time of sending.
+                </span>
+              </li>
+            </ul>
             <li className="c0 c2 li-bullet-1">
               <span className="c3">
                 Notice to the Lender
