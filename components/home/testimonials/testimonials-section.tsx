@@ -1,20 +1,18 @@
-// components/home/testimonials/TestimonialsSection.tsx
-import TestimonialCard from "./testimonial-card"; // Impor komponen kartu
+import Link from "next/link"; // ✅ Import Link
+import TestimonialCard from "./testimonial-card";
 
-// Impor gambar untuk testimoni
 import catherineImage from "@/public/images/user-story/catherine.jpg";
 import juvyImage from "@/public/images/user-story/juvy.jpg";
 import mariaImage from "@/public/images/user-story/maria.jpg";
 
-// Data testimoni dari gambar test.png
 const testimonials = [
   {
     img: catherineImage,
     name: "Catherine",
-    date: "", // Tanggal tidak ada di desain, jadi dikosongkan
+    date: "",
     content:
       "“Napakababa ng interest na ibinibigay ni Happycash. Bukod sa maliit ang interest ang gaaan pa ng hulog sa bayaran”",
-    videoThumb: catherineImage, // Menggunakan gambar utama sebagai thumbnail video
+    videoThumb: catherineImage,
     videoUrl: "https://pub.happycash.ph/video/HC-CATHERINE-15SEC-1.3.mp4",
   },
   {
@@ -74,12 +72,13 @@ export default function TestimonialsSection() {
               goals, their journeys reflect our commitment to providing reliable
               and accessible financial solutions.
             </p>
-            <a
-              href="#0" // Ganti dengan URL yang sesuai
+
+            <Link
+              href="/user-story"
               className="inline-block rounded-xl bg-custom-yellow px-8 py-3 font-bold text-black hover:bg-yellow-500"
             >
               Watch Stories
-            </a>
+            </Link>
           </div>
         </div>
       </div>
