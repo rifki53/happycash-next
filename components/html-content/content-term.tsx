@@ -626,144 +626,145 @@ export default function ContentPrivacyPolicy() {
                 continuing basis that:
               </span>
             </li>
-          </ol>
-          <ul className="c4 lst-kix_list_15-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                The obligation expressed or to be assumed by the Borrower in
-                this Loan Agreement and the Terms &amp; Conditions, and any
-                relevant documents are legal, valid, binding and enforceable
-                obligations;
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_16-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                The entry into and performance by the Borrower of, and the
-                transactions contemplated by, this Loan Agreement and the Terms
-                &amp; Conditions, and any relevant documents do not and shall
-                not conflict with (i) any law or regulation applicable to the
-                Borrower; or (ii) any agreement or instrument binding upon the
-                Borrower;
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_17-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                The Borrower is not a Politically-Exposed Person (PEP) as
-                defined under the Anti-Money Laundering Act of 2001, as amended.
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_18-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                No event of default is continuing or might reasonably be
-                expected to result from the making available of the Loan;
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_19-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                The Borrower has disclosed to the Lender all information
-                (financial or otherwise) relating to the Borrower and all other
-                relevant parties which is material to be known to the Lender in
-                view of the provisions of this Loan Agreement and the Promissory
-                Note, and other relevant documents and which is true, complete
-                and accurate in all material respects at the date it was given
-                and is not misleading in any respect
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_20-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                The Borrower has disclosed to the Lender all information
-                relating to the Borrower which is material to the Lender in view
-                of the provisions of the Promissory Note and other relevant
-                documents and which is true, complete and accurate in all
-                material respects as at the date it was given and is not
-                misleading in any respect. The Borrower hereby authorized the
-                Lender to request and obtain data from third party(ies) to
-                verify any information the Borrower provided to the Lender in
-                connection with this Loan Application.
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_21-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c23">
-                The Borrower has read, understood and agreed to comply with
-                terms and conditions of the Loan Agreement, Promissory Note, and
-                other relevant documents. The Borrower accepts and agrees to be
-                bound by the Loan Agreement, Terms &amp; Conditions and other
-                documents including amendments of these documents as an integral
-                part thereof, which the Borrower acknowledges are available for
-                reading or downloading at the Lender&#39;s website:{" "}
-              </span>
-              <span className="c23 c24">
-                <a
-                  className="c21"
-                  href="https://www.google.com/url?q=https://www.happycash.ph/&amp;sa=D&amp;source=editors&amp;ust=1764761415670805&amp;usg=AOvVaw0A4BfAaA_9Wf2VnJylLp_-"
-                >
-                  https://www.happycash.ph/
-                </a>
-              </span>
-              <span className="c3">
-                &nbsp;and/or notified by the Lender to the Borrower through
-                various communication channels which the Lender deems fit.
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_22-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                The Borrower understands and acknowledges his/her obligations
-                with respect to making the full, complete and timely payment of
-                his/her loan obligation as stipulated in the Loan Agreement and
-                the Promissory Note.
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_23-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                The Borrower understands and acknowledges that the Lender has
-                the absolute discretion to accept or reject the Loan Application
-                for valid cause, and that the Loan Application and its
-                supporting documents shall become part of the Lender&rsquo;s
-                record and shall not be returned to the Borrower.
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_24-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                The Borrower understands and acknowledges that the
-                Borrower&rsquo;s Loan Application should be regarded as an offer
-                only. Official approval of the loan application shall be decided
-                upon the Lender&rsquo;s appraisal and approval according to the
-                Lender&rsquo;s policy from time to time. The Borrower
-                voluntarily agrees to the Lender&rsquo;s decisions. The Borrower
-                shall not file any complaints, or seek redress against the
-                Lender on these matters.
-              </span>
-            </li>
-          </ul>
-          <ul className="c4 lst-kix_list_25-1 start">
-            <li className="c0 c1 li-bullet-1">
-              <span className="c3">
-                The Borrower unconditionally acknowledges that the Borrower is
-                truly and lawfully indebted to the Lender on the approved loan
-                amount in case the Lender had disbursed the said amount as
-                stipulated.
-              </span>
-            </li>
-          </ul>
-          <ol className="c4 lst-kix_list_25-0 start" start={1}>
+            <ul className="c4 lst-kix_list_15-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  The obligation expressed or to be assumed by the Borrower in
+                  this Loan Agreement and the Terms &amp; Conditions, and any
+                  relevant documents are legal, valid, binding and enforceable
+                  obligations;
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_16-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  The entry into and performance by the Borrower of, and the
+                  transactions contemplated by, this Loan Agreement and the
+                  Terms &amp; Conditions, and any relevant documents do not and
+                  shall not conflict with (i) any law or regulation applicable
+                  to the Borrower; or (ii) any agreement or instrument binding
+                  upon the Borrower;
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_17-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  The Borrower is not a Politically-Exposed Person (PEP) as
+                  defined under the Anti-Money Laundering Act of 2001, as
+                  amended.
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_18-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  No event of default is continuing or might reasonably be
+                  expected to result from the making available of the Loan;
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_19-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  The Borrower has disclosed to the Lender all information
+                  (financial or otherwise) relating to the Borrower and all
+                  other relevant parties which is material to be known to the
+                  Lender in view of the provisions of this Loan Agreement and
+                  the Promissory Note, and other relevant documents and which is
+                  true, complete and accurate in all material respects at the
+                  date it was given and is not misleading in any respect
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_20-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  The Borrower has disclosed to the Lender all information
+                  relating to the Borrower which is material to the Lender in
+                  view of the provisions of the Promissory Note and other
+                  relevant documents and which is true, complete and accurate in
+                  all material respects as at the date it was given and is not
+                  misleading in any respect. The Borrower hereby authorized the
+                  Lender to request and obtain data from third party(ies) to
+                  verify any information the Borrower provided to the Lender in
+                  connection with this Loan Application.
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_21-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c23">
+                  The Borrower has read, understood and agreed to comply with
+                  terms and conditions of the Loan Agreement, Promissory Note,
+                  and other relevant documents. The Borrower accepts and agrees
+                  to be bound by the Loan Agreement, Terms &amp; Conditions and
+                  other documents including amendments of these documents as an
+                  integral part thereof, which the Borrower acknowledges are
+                  available for reading or downloading at the Lender&#39;s
+                  website:{" "}
+                </span>
+                <span className="c23 c24">
+                  <a
+                    className="c21"
+                    href="https://www.google.com/url?q=https://www.happycash.ph/&amp;sa=D&amp;source=editors&amp;ust=1764761415670805&amp;usg=AOvVaw0A4BfAaA_9Wf2VnJylLp_-"
+                  >
+                    https://www.happycash.ph/
+                  </a>
+                </span>
+                <span className="c3">
+                  &nbsp;and/or notified by the Lender to the Borrower through
+                  various communication channels which the Lender deems fit.
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_22-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  The Borrower understands and acknowledges his/her obligations
+                  with respect to making the full, complete and timely payment
+                  of his/her loan obligation as stipulated in the Loan Agreement
+                  and the Promissory Note.
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_23-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  The Borrower understands and acknowledges that the Lender has
+                  the absolute discretion to accept or reject the Loan
+                  Application for valid cause, and that the Loan Application and
+                  its supporting documents shall become part of the
+                  Lender&rsquo;s record and shall not be returned to the
+                  Borrower.
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_24-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  The Borrower understands and acknowledges that the
+                  Borrower&rsquo;s Loan Application should be regarded as an
+                  offer only. Official approval of the loan application shall be
+                  decided upon the Lender&rsquo;s appraisal and approval
+                  according to the Lender&rsquo;s policy from time to time. The
+                  Borrower voluntarily agrees to the Lender&rsquo;s decisions.
+                  The Borrower shall not file any complaints, or seek redress
+                  against the Lender on these matters.
+                </span>
+              </li>
+            </ul>
+            <ul className="c4 lst-kix_list_25-1 start">
+              <li className="c0 c1 li-bullet-1">
+                <span className="c3">
+                  The Borrower unconditionally acknowledges that the Borrower is
+                  truly and lawfully indebted to the Lender on the approved loan
+                  amount in case the Lender had disbursed the said amount as
+                  stipulated.
+                </span>
+              </li>
+            </ul>
             <li className="c0 c2 li-bullet-1">
               <span className="c3">
                 The Borrower covenants with the Lender that during the Loan
