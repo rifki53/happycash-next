@@ -7,13 +7,16 @@ const NotFoundSection = () => {
       <div className="mx-auto w-full max-w-6xl px-4 py-10 pt-28 sm:px-6 lg:px-8">
         <div className="flex w-full flex-col items-center md:flex-row md:items-start">
           <div className="flex w-full items-center justify-center p-4 md:w-1/2 md:justify-end md:p-6">
-            {/* Updated Image classes to w-full */}
+            {/* 
+              ✅ CHANGED: Removed 'w-full' 
+              Added 'w-64' (256px) for mobile and 'md:w-80' (320px) for desktop 
+            */}
             <Image
               src="/images/404-mascot.png"
               alt="Not Found Illustration"
               width={288}
               height={288}
-              className="w-full h-auto"
+              className="h-auto w-64 md:w-120"
             />
           </div>
           <div className="flex w-full flex-col items-center justify-center p-4 text-center md:w-1/2 md:items-start md:p-8 md:text-left">
