@@ -16,16 +16,12 @@ export default function PostNav({ previousPost, nextPost }: PostNavProps) {
   }
 
   return (
-    // --- PERUBAHAN DI SINI ---
-    // Mobile: border-t (top) + pt-8 (padding-top)
-    // Desktop (lg): border-t dihapus, diganti border-l (left) + pl-8 (padding-left)
     <div className="flex flex-col gap-8 border-t border-gray-200 pt-8 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-8">
       
-      {/* Artikel Sebelumnya */}
       {previousPost && (
         <div>
           <div className="text-sm text-gray-500 mb-1">
-            ← Postingan Sebelumnya
+            ← Previous Post
           </div>
           <h4 className="text-lg font-medium">
             <Link
@@ -38,11 +34,10 @@ export default function PostNav({ previousPost, nextPost }: PostNavProps) {
         </div>
       )}
 
-      {/* Artikel Selanjutnya */}
       {nextPost && (
         <div>
           <div className="text-sm text-gray-500 mb-1">
-            Postingan Selanjutnya →
+            Next Post →
           </div>
           <h4 className="text-lg font-medium">
             <Link
